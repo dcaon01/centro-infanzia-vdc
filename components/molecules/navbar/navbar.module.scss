@@ -1,0 +1,22 @@
+.navbar {
+    position: sticky;
+    y: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@font-face {
+    font-family: 'Cakerolli';
+    src: url("../../../public/fonts/cakerolli-trial-cufonfonts/CakerolliTrialRegular-nReRR.otf") format("otf");
+}
+
+.link {
+    padding: 20px 10px;
+
+    .text {
+        font: 'Cakerolli';
+        text-decoration: none;
+    }
+}

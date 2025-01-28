@@ -1,0 +1,14 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@font-face {
+  font-family: Cakerolli;
+  src: url("../public/fonts/cakerolli-trial-cufonfonts/CakerolliTrialRegular-nReRR.otf") format("otf");
+  font-display: swap;
+}
+
+body {
+  font-family: Cakerolli;
+}
