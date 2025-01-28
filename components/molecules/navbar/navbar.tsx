@@ -3,20 +3,16 @@ import classes from "./navbar.module.scss";
 
 export default function Navbar() {
     return (
-        <nav className={classes.navbar}>
-            <Link className={classes.link} href={"/"}>
-                <div>
-                    <p className={classes.text}>
-                        Home
-                    </p>
-                </div>
-            </Link>
-            <Link href={"/servizi"}>Servizi</Link>
-            <Link href={"/progettazione"}>Progettazione</Link>
-            <Link href={"/regolamento"}>Regolamento</Link>
-            <Link href={"/menu"}>Menù</Link>
-            <Link href={"/modulistica"}>Modulistica</Link>
-            <Link href={"/contatti"}>Contatti</Link>
-        </nav>
+        <div className={classes.navbarContainer}>
+            <nav className={classes.navbar}>
+                <Link className={`${classes.link} ${classes.left}`} href={"/"}>Home</Link>
+                <Link className={classes.link} href={"/servizi"}>Servizi</Link>
+                <Link className={classes.link} href={"/progettazione"}>Progettazione</Link>
+                <Link className={classes.link} href={"/regolamento"}>Regolamento</Link>
+                <Link className={classes.link} href={"/menu"}>Menù</Link>
+                <Link className={classes.link} href={"/modulistica"}>Modulistica</Link>
+                <Link className={`${classes.link} ${classes.right}`} href={"/contatti"}>Contatti</Link>
+            </nav>
+        </div>
     );
 };

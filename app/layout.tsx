@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import Navbar from "@/components/molecules/navbar/navbar";
+import { Sour_Gummy } from "next/font/google";
+const sour_gummy = Sour_Gummy({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Scuola Almarosa Rech",
@@ -14,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${sour_gummy.className}`}>
         <Navbar />
         {children}
       </body>

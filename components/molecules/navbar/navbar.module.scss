@@ -1,22 +1,43 @@
-.navbar {
-    position: sticky;
-    y: 100px;
+@import "../../../app/_variables.scss";
+
+.navbarContainer {
+    position: fixed;
+    top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    border-radius: 5px;
+    width: 100%;
 }
 
-@font-face {
-    font-family: 'Cakerolli';
-    src: url("../../../public/fonts/cakerolli-trial-cufonfonts/CakerolliTrialRegular-nReRR.otf") format("otf");
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: white;
+    border: solid 5px white;
+    border-radius: 10px;
 }
 
 .link {
     padding: 20px 10px;
+    text-decoration: none;
+    user-select: none;
+    background-color: $light-orange;
+    color: white;
 
-    .text {
-        font: 'Cakerolli';
-        text-decoration: none;
+    &:hover {
+        background-color: $dark-orange;
     }
+}
+
+.left {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.right {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
