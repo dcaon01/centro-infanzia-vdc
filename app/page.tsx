@@ -1,26 +1,32 @@
 'use client';
 
 import classes from "./page.module.scss";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 /**
  * Components that renders the home page
  * @returns the home page render.
  */
 export default function Home() {
+  const { scrollYProgress } = useScroll();
+  const opacity = useTransform(scrollYProgress, [0, 0.5], ["0", "0.5"]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, -200]);
   return (
     <main>
-      <div className={classes.hookContainer}>
-        <img 
-          className={classes.sun} 
-          src="/svgs/sole-hook.svg" 
+      <div
+        className={classes.hookContainer}
+      >
+        <motion.div className={classes.shadowBox} style={{ opacity: opacity }}/>
+        <img
+          className={classes.sun}
+          src="/svgs/sole-hook.svg"
         />
-        <img 
-          className={`${classes.cloud} ${classes.c1}`} 
-          src="/svgs/nuvola-disegnata.svg" 
+        <img
+          className={`${classes.cloud} ${classes.c1}`}
+          src="/svgs/nuvola-disegnata.svg"
         />
-        <img 
-          className={`${classes.cloud} ${classes.c2}`} 
-          src="/svgs/nuvola-disegnata.svg" 
+        <img
+          className={`${classes.cloud} ${classes.c2}`}
+          src="/svgs/nuvola-disegnata.svg"
         />
         <motion.div
           initial={{
@@ -38,9 +44,9 @@ export default function Home() {
           <p className={classes.p2}>Almarosa Rech</p>
           <p className={classes.vdc}>Villa del Conte</p>
         </motion.div>
-        <motion.img 
-          className={`${classes.hill}`} 
-          src="/svgs/collina.svg" 
+        <motion.img
+          className={`${classes.hill}`}
+          src="/svgs/collina.svg"
           initial={{
             opacity: 0,
             y: +30,
@@ -53,9 +59,9 @@ export default function Home() {
             duration: 0.5
           }}
         />
-        <motion.img 
-          className={`${classes.children}`} 
-          src="/svgs/bambini.svg" 
+        <motion.img
+          className={`${classes.children}`}
+          src="/svgs/bambini.svg"
           initial={{
             opacity: 0,
           }}
@@ -68,9 +74,13 @@ export default function Home() {
           }}
         />
       </div>
-      <div>
-
-      </div>
+      <motion.div className={classes.yearsContainer} style={{ y: y }}>
+          <img className={classes.topEdge} src="/svgs/bordo.svg"/>
+          <div className={classes.yearsSection}>
+            
+          </div>
+          <img className={classes.bottomEdge} src="/svgs/bordo.svg"/>
+      </motion.div>
     </main>
   );
 }
