@@ -10,12 +10,21 @@
   .cloud {
     position: absolute;
     z-index: 0;
-    width: 300px;
+    
+  }
 
-    .c1 {
-      left: 30vw;
-      top: 40vh;
-    }
+  .c1 {
+    width: 250px;
+    left: 5vw;
+    top: 40vh;
+    animation: leftEntering 0.5s ease-out, move1 5s ease-in-out 0.5s infinite;
+  }
+
+  .c2 {
+    right: 5vw;
+    top: 20vh;
+    width: 280px;
+    animation: rightEntering 0.5s ease-out, move1 4.5s ease-in-out 0.5s infinite reverse;
   }
 }
 
@@ -44,5 +53,39 @@
   .vdc {
     font-size: 2rem;
     font-weight: normal;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftEntering {
+  0% {
+    transform: translateX(-5vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightEntering {
+  0% {
+    transform: translateX(+5vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

@@ -1,19 +1,26 @@
 'use client';
 
 import styles from "./page.module.scss";
-import { motion } from "framer-motion";
-
+import { motion } from "motion/react";
 /**
  * Components that renders the home page
  * @returns the home page render.
  */
 export default function Home() {
-
   return (
     <main>
       <div className={styles.hookContainer}>
-        <img className={styles.cloud} src="/svgs/nuvola-disegnata.svg" />
-        <img className={styles.cloud} src="/svgs/nuvola-disegnata.svg" />
+        {/* <video>
+          <source></source>
+        </video> */}
+        <img 
+          className={`${styles.cloud} ${styles.c1}`} 
+          src="/svgs/nuvola-disegnata.svg" 
+        />
+        <img 
+          className={`${styles.cloud} ${styles.c2}`} 
+          src="/svgs/nuvola-disegnata.svg" 
+        />
         <motion.div
           initial={{
             opacity: 0,
