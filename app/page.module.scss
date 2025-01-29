@@ -43,6 +43,15 @@
     bottom: 20px;
     right: 100px;
   }
+
+  .sun {
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: -50px;
+    width: 300px;
+    animation: topEntering 0.5s ease-out, pulsingAndRotating 10s ease-in-out 0.5s infinite;
+  }
 }
 
 .titleContainer {
@@ -52,6 +61,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  z-index: 5;
 
   p {
     color: white;
@@ -105,4 +115,33 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+@keyframes topEntering {
+  0% {
+    transform: translateY(-5vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulsingAndRotating {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  } 
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  } 
 }

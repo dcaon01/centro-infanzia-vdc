@@ -10,9 +10,10 @@ export default function Home() {
   return (
     <main>
       <div className={classes.hookContainer}>
-        {/* <video>
-          <source></source>
-        </video> */}
+        <img 
+          className={classes.sun} 
+          src="/svgs/sole-hook.svg" 
+        />
         <img 
           className={`${classes.cloud} ${classes.c1}`} 
           src="/svgs/nuvola-disegnata.svg" 
