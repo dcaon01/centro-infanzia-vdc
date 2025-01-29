@@ -1,25 +1,26 @@
 .navbarContainer {
     position: fixed;
-    top: 10px;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     width: 100%;
+    z-index: 20;
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 2px;
     background-color: white;
-    border: solid 3px white;
+    border: solid 2px white;
     border-radius: 10px;
 }
 
 .link {
-    padding: 20px 10px;
+    padding: 15px 10px;
     text-decoration: none;
     user-select: none;
     background-color: $light-orange;

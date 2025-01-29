@@ -1,6 +1,6 @@
 'use client';
 
-import styles from "./page.module.scss";
+import classes from "./page.module.scss";
 import { motion } from "motion/react";
 /**
  * Components that renders the home page
@@ -9,19 +9,37 @@ import { motion } from "motion/react";
 export default function Home() {
   return (
     <main>
-      <div className={styles.hookContainer}>
+      <div className={classes.hookContainer}>
         {/* <video>
           <source></source>
         </video> */}
         <img 
-          className={`${styles.cloud} ${styles.c1}`} 
+          className={`${classes.cloud} ${classes.c1}`} 
           src="/svgs/nuvola-disegnata.svg" 
         />
         <img 
-          className={`${styles.cloud} ${styles.c2}`} 
+          className={`${classes.cloud} ${classes.c2}`} 
           src="/svgs/nuvola-disegnata.svg" 
         />
         <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5
+          }}
+          className={classes.titleContainer}
+        >
+          <p className={classes.p1}>Scuola</p>
+          <p className={classes.p2}>Almarosa Rech</p>
+          <p className={classes.vdc}>Villa del Conte</p>
+        </motion.div>
+        <motion.img 
+          className={`${classes.hill}`} 
+          src="/svgs/collina.svg" 
           initial={{
             opacity: 0,
             y: +30,
@@ -33,12 +51,24 @@ export default function Home() {
           transition={{
             duration: 0.5
           }}
-          className={styles.titleContainer}
-        >
-          <p  className={styles.p1}>Scuola</p>
-          <p className={styles.p2}>Almarosa Rech</p>
-          <p className={styles.vdc}>Villa del Conte</p>
-        </motion.div>
+        />
+        <motion.img 
+          className={`${classes.children}`} 
+          src="/svgs/bambini.svg" 
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 1,
+            duration: 0.5
+          }}
+        />
+      </div>
+      <div>
+
       </div>
     </main>
   );
