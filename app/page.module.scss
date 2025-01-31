@@ -93,28 +93,59 @@
 }
 
 .yearsContainer {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   z-index: 10;
-  height: 400px;
-  background-color: $cream-orange;
 
   .topEdge {
     position: absolute;
-    width: 110%;
+    width: 105%;
     top: -20px;
-    box-shadow: 0 0px 20px -5px rgba(0, 0, 0, 0.3);
-    z-index: 0;
+    z-index: 10;
+    filter: drop-shadow(10px 0px 15px rgba(0,0,0,0.5));
+    background: linear-gradient(to top, $cream-orange 50%, rgba(white, 0) 0%);
   }
 
   .yearsSection {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    z-index: 11;
+    gap: 10px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $cream-orange;
+
+    .year {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 350px;
+      height: 350px;
+      z-index: 13;
+
+      .flower {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        z-index: 13;
+      }
+    }
   }
 
   .bottomEdge {
     position: absolute;
-    width: 110%;
+    width: 105%;
     bottom: -20px;
+    z-index: 10;
+    filter: drop-shadow(10px 0px 15px rgba(0,0,0,0.5));
+    background: linear-gradient(to bottom, $cream-orange 50%, rgba(white, 0) 0%);
   }
 }
 

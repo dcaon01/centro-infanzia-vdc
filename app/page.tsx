@@ -77,7 +77,18 @@ export default function Home() {
       <motion.div className={classes.yearsContainer} style={{ y: y }}>
           <img className={classes.topEdge} src="/svgs/bordo.svg"/>
           <div className={classes.yearsSection}>
-            
+            {/* Nido */}
+            <div className={classes.year}>
+              <img className={classes.flower} src="/svgs/fiore.svg"/>
+            </div>
+            {/* Primavera */}
+            <div className={classes.year}>
+              <img className={classes.flower} src="/svgs/fiore.svg"/>
+            </div>
+            {/* Infanzia */}
+            <div className={classes.year}>
+              <img className={classes.flower} src="/svgs/fiore.svg"/>
+            </div>
           </div>
           <img className={classes.bottomEdge} src="/svgs/bordo.svg"/>
       </motion.div>
