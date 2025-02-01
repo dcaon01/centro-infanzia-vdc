@@ -1,5 +1,5 @@
 .navbarContainer {
-    position: fixed;
+    position: absolute;
     top: 20px;
     display: flex;
     align-items: center;
@@ -23,11 +23,11 @@
     padding: 15px 10px;
     text-decoration: none;
     user-select: none;
-    background-color: $light-orange;
+    background-color: #ff9900;
     color: white;
 
     &:hover {
-        background-color: $dark-orange;
+        background-color: #eb7800;
     }
 }
 

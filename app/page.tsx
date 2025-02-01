@@ -1,16 +1,23 @@
 'use client';
 
+import React from "react";
 import YearFlower from "@/components/molecules/year-flower/YearFlower";
 import classes from "./page.module.scss";
 import { motion, useScroll, useTransform } from "motion/react";
+
+interface props {}
+
 /**
  * Components that renders the home page
  * @returns the home page render.
  */
-export default function Home() {
+const HomePage: React.FC<props> = () => {
+  // To monitor the page scrolling
   const { scrollYProgress } = useScroll();
+  // useTransform monitor the progress of the scrolling (in this case) from 0 to 50% of it.
   const opacity = useTransform(scrollYProgress, [0, 0.5], ["0", "0.5"]);
   const y = useTransform(scrollYProgress, [0, 0.5], [0, -200]);
+
   return (
     <main>
       <div
@@ -79,10 +86,14 @@ export default function Home() {
         <img className={classes.topEdge} src="/svgs/bordo.svg" />
         <div className={classes.yearsSection}>
           {/* Nido */}
-          <YearFlower title={""} description={""} delay={0} />
+          <YearFlower title={"Nido"} description={"Da 12 a 36 mesi"} delay={0} />
+          <YearFlower title={"Primavera"} description={"Da 2 a 3 anni"} delay={0.3} />
+          <YearFlower title={"Infanzia"} description={"Da 3 a 6 anni"} delay={0.6} />
         </div>
         <img className={classes.bottomEdge} src="/svgs/bordo.svg" />
       </motion.div>
     </main>
   );
 }
+
+export default HomePage;

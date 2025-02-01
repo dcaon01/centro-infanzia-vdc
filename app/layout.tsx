@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import Navbar from "@/components/molecules/navbar/Navbar";
 import { Sour_Gummy } from "next/font/google";
+import Footer from "@/components/molecules/footer/Footer";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={`${sour_gummy.className}`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

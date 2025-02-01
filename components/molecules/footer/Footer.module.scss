@@ -1,0 +1,18 @@
+.footerContainer {
+    background-color: #ff9900;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // To delete
+    min-height: 100px;
+    // filter: drop-shadow(10px 0px 15px rgba(0,0,0,0.5));
+    box-sizing: border-box;
+
+    .footerComponent {
+        display: flex;
+        align-items: center;
+    }
+}
