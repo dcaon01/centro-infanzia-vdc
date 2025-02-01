@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import React from "react";
 import classes from "./YearFlower.module.scss";
 import { Sour_Gummy } from "next/font/google";
+import { spring } from "motion";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
 
 interface props {
@@ -30,7 +31,8 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
                 viewport={{ once: true }}
                 transition={{
                     duration: 0.7,
-                    delay: delay
+                    delay: delay,
+                    type: spring
                 }}
             />
             <img className={classes.land} src="/svgs/terreno.svg" />

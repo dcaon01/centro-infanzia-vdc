@@ -96,6 +96,13 @@ const HomePage = () => {
         </div>
         <img className={classes.bottomEdge} src="/svgs/bordo.svg" />
       </motion.div>
+      <div className={classes.pageContent}>
+          <h1>Benvenuti!</h1>
+          <p>
+            Il personale della Scuola Almarosa Rech di Villa del Conte vi dà il benvenuto!
+            Su questo sito potete trovare tutte le informazioni che state cercando sulla nostra struttura.
+          </p>
+      </div>
     </main>
   );
 }

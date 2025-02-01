@@ -133,6 +133,14 @@
   }
 }
 
+.pageContent {
+  position: relative;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 50px;
+  top: -100px;
+}
+
 // Animations
 @keyframes move1 {
   0% {
