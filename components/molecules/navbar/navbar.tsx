@@ -1,10 +1,13 @@
 'use client'
 
+import React from "react";
 import Link from "next/link";
 import classes from "./navbar.module.scss";
 import { motion } from "framer-motion";
 
-export default function Navbar() {
+interface props {}
+
+const Navbar: React.FC<props> = () => {
     return (
         <motion.div 
             className={classes.navbarContainer}
@@ -21,3 +24,5 @@ export default function Navbar() {
         </motion.div>
     );
 };
+
+export default Navbar;

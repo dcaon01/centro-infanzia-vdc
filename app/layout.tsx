@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import Navbar from "@/components/molecules/navbar/navbar";
+import Navbar from "@/components/molecules/navbar/Navbar";
 import { Sour_Gummy } from "next/font/google";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] })
 

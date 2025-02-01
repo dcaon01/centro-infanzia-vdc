@@ -15,7 +15,7 @@ export default function Home() {
       <div
         className={classes.hookContainer}
       >
-        <motion.div className={classes.shadowBox} style={{ opacity: opacity }}/>
+        <motion.div className={classes.shadowBox} style={{ opacity: opacity }} />
         <img
           className={classes.sun}
           src="/svgs/sole-hook.svg"
@@ -75,22 +75,31 @@ export default function Home() {
         />
       </div>
       <motion.div className={classes.yearsContainer} style={{ y: y }}>
-          <img className={classes.topEdge} src="/svgs/bordo.svg"/>
-          <div className={classes.yearsSection}>
-            {/* Nido */}
-            <div className={classes.year}>
-              <img className={classes.flower} src="/svgs/fiore.svg"/>
-            </div>
-            {/* Primavera */}
-            <div className={classes.year}>
-              <img className={classes.flower} src="/svgs/fiore.svg"/>
-            </div>
-            {/* Infanzia */}
-            <div className={classes.year}>
-              <img className={classes.flower} src="/svgs/fiore.svg"/>
-            </div>
+        <img className={classes.topEdge} src="/svgs/bordo.svg" />
+        <div className={classes.yearsSection}>
+          {/* Nido */}
+          <motion.div className={classes.year}
+            initial={{
+              height: 0,
+            }}
+            whileInView={{
+              height: 350
+            }}
+            viewport={{ once: true }}
+          >
+            <img className={classes.flower} src="/svgs/fiore.svg" />
+            <img className={classes.flower} src="/svgs/fiore.svg" />
+          </motion.div>
+          {/* Primavera */}
+          <div className={classes.year}>
+            <img className={classes.flower} src="/svgs/fiore.svg" />
           </div>
-          <img className={classes.bottomEdge} src="/svgs/bordo.svg"/>
+          {/* Infanzia */}
+          <div className={classes.year}>
+            <img className={classes.flower} src="/svgs/fiore.svg" />
+          </div>
+        </div>
+        <img className={classes.bottomEdge} src="/svgs/bordo.svg" />
       </motion.div>
     </main>
   );
