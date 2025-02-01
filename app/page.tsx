@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react";
+import { useEffect } from "react";
 import YearFlower from "@/components/molecules/year-flower/YearFlower";
 import classes from "./page.module.scss";
 import { motion, useScroll, useTransform } from "motion/react";
@@ -15,6 +15,12 @@ const HomePage = () => {
   // useTransform monitor the progress of the scrolling (in this case) from 0 to 50% of it.
   const opacity = useTransform(scrollYProgress, [0, 0.5], ["0", "0.5"]);
   const y = useTransform(scrollYProgress, [0, 0.5], [0, -200]);
+
+  // We try to prevent refresh-related bugs by setting the 
+  // scroll at the top of the page at every refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main>
