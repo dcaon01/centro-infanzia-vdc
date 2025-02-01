@@ -1,8 +1,5 @@
-import React from "react";
 
-interface props {}
-
-const PlanningPage: React.FC<props> = () => {
+const PlanningPage = () => {
     return (
         <></>
     );

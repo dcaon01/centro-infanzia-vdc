@@ -1,8 +1,4 @@
-import React from "react";
-
-interface props {}
-
-const SpringPage: React.FC<props> = () => {
+const SpringPage = () => {
     return (
         <></>
     );

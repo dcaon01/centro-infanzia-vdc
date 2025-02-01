@@ -5,13 +5,11 @@ import YearFlower from "@/components/molecules/year-flower/YearFlower";
 import classes from "./page.module.scss";
 import { motion, useScroll, useTransform } from "motion/react";
 
-interface props {}
-
 /**
  * Components that renders the home page
  * @returns the home page render.
  */
-const HomePage: React.FC<props> = () => {
+const HomePage = () => {
   // To monitor the page scrolling
   const { scrollYProgress } = useScroll();
   // useTransform monitor the progress of the scrolling (in this case) from 0 to 50% of it.

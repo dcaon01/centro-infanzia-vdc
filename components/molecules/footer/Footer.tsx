@@ -1,9 +1,6 @@
-import React from "react";
 import classes from "./Footer.module.scss";
 
-interface props {}
-
-const Footer: React.FC<props> = () => {
+const Footer = () => {
     return (
         <div className={classes.footerContainer}>
             <div className={classes.footerComponent}>
