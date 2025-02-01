@@ -24,22 +24,11 @@ const HomePage = () => {
 
   return (
     <main>
-      <div
-        className={classes.hookContainer}
-      >
+      <div className={classes.hookContainer}>
         <motion.div className={classes.shadowBox} style={{ opacity: opacity }} />
-        <img
-          className={classes.sun}
-          src="/svgs/sole-hook.svg"
-        />
-        <img
-          className={`${classes.cloud} ${classes.c1}`}
-          src="/svgs/nuvola-disegnata.svg"
-        />
-        <img
-          className={`${classes.cloud} ${classes.c2}`}
-          src="/svgs/nuvola-disegnata.svg"
-        />
+        <img className={classes.sun} src="/svgs/sole-hook.svg" />
+        <img className={`${classes.cloud} ${classes.c1}`} src="/svgs/nuvola-disegnata.svg" />
+        <img className={`${classes.cloud} ${classes.c2}`} src="/svgs/nuvola-disegnata.svg" />
         <motion.div
           initial={{
             opacity: 0,
@@ -97,11 +86,11 @@ const HomePage = () => {
         <img className={classes.bottomEdge} src="/svgs/bordo.svg" />
       </motion.div>
       <div className={classes.pageContent}>
-          <h1>Benvenuti!</h1>
-          <p>
-            Il personale della Scuola Almarosa Rech di Villa del Conte vi dà il benvenuto!
-            Su questo sito potete trovare tutte le informazioni che state cercando sulla nostra struttura.
-          </p>
+        <h1>Benvenuti!</h1>
+        <p>
+          Il personale della Scuola Almarosa Rech di Villa del Conte vi dà il benvenuto!
+          Su questo sito potete trovare tutte le informazioni che state cercando sulla nostra struttura.
+        </p>
       </div>
     </main>
   );

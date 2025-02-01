@@ -16,13 +16,28 @@ const Footer = () => {
                     <div className={classes.footerInfoComponentContent}>
                         <p>Telefono: 049 574 4064</p>
                         <p>Email: asilo@email.com</p>
+                        <p>Partita IVA: 2323232323</p>
                     </div>
                 </div>
                 <div className={classes.footerInfoComponent}>
                     <h3>Social</h3>
                     <div className={classes.footerInfoComponentContent}>
-                        <p>Telefono: 049 574 4064</p>
-                        <p>Email: asilo@email.com</p>
+                        <div className={classes.social}>
+                            <img className={classes.socialLogo} src="/svgs/whatsapp.svg" />
+                            <p>Whatsapp</p>
+                        </div>
+                        <div className={classes.social}>
+                            <img className={classes.socialLogo} src="/svgs/telegram.svg" />
+                            <p>Telegram</p>
+                        </div>
+                        <div className={classes.social}>
+                            <img className={classes.socialLogo} src="/svgs/instagram.svg" />
+                            <p>Instagram</p>
+                        </div>
+                        <div className={classes.social}>
+                            <img className={classes.socialLogo} src="/svgs/facebook.svg" />
+                            <p>Facebook</p>
+                        </div>
                     </div>
                 </div>
             </div>
