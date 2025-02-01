@@ -1,5 +1,6 @@
 'use client';
 
+import YearFlower from "@/components/molecules/year-flower/YearFlower";
 import classes from "./page.module.scss";
 import { motion, useScroll, useTransform } from "motion/react";
 /**
@@ -78,26 +79,7 @@ export default function Home() {
         <img className={classes.topEdge} src="/svgs/bordo.svg" />
         <div className={classes.yearsSection}>
           {/* Nido */}
-          <motion.div className={classes.year}
-            initial={{
-              height: 0,
-            }}
-            whileInView={{
-              height: 350
-            }}
-            viewport={{ once: true }}
-          >
-            <img className={classes.flower} src="/svgs/fiore.svg" />
-            <img className={classes.flower} src="/svgs/fiore.svg" />
-          </motion.div>
-          {/* Primavera */}
-          <div className={classes.year}>
-            <img className={classes.flower} src="/svgs/fiore.svg" />
-          </div>
-          {/* Infanzia */}
-          <div className={classes.year}>
-            <img className={classes.flower} src="/svgs/fiore.svg" />
-          </div>
+          <YearFlower title={""} description={""} delay={0} />
         </div>
         <img className={classes.bottomEdge} src="/svgs/bordo.svg" />
       </motion.div>

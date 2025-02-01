@@ -14,12 +14,19 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
         >
             <motion.img className={classes.flower} src="/svgs/fiore.svg" 
                 initial={{
-                    height: 0,
+                    bottom: 0,
+                    height: '0%',
+                    left: 0
                 }}
                 whileInView={{
-                    height: 350
+                    bottom: 20,
+                    left: -10,
+                    height: '95%'
                 }}
                 viewport={{ once: true }}
+                transition={{
+                    duration: 0.7
+                }}
             />
             <img className={classes.land} src="/svgs/terreno.svg" />
         </div>

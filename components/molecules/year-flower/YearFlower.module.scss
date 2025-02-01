@@ -1,0 +1,21 @@
+.year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    z-index: 13;
+
+    .flower {
+        position: absolute;
+        width: 95%;
+        z-index: 13;
+        left: -10px;
+    }
+
+    .land {
+        position: absolute;
+        bottom: 0px;
+    }
+}
