@@ -1,0 +1,26 @@
+html {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 1.5rem;
+}

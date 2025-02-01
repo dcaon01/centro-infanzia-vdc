@@ -1,95 +1,99 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
 
-export default function Home() {
+import React from "react";
+import YearFlower from "@/components/molecules/year-flower/YearFlower";
+import classes from "./page.module.scss";
+import { motion, useScroll, useTransform } from "motion/react";
+
+interface props {}
+
+/**
+ * Components that renders the home page
+ * @returns the home page render.
+ */
+const HomePage: React.FC<props> = () => {
+  // To monitor the page scrolling
+  const { scrollYProgress } = useScroll();
+  // useTransform monitor the progress of the scrolling (in this case) from 0 to 50% of it.
+  const opacity = useTransform(scrollYProgress, [0, 0.5], ["0", "0.5"]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, -200]);
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <main>
+      <div
+        className={classes.hookContainer}
+      >
+        <motion.div className={classes.shadowBox} style={{ opacity: opacity }} />
+        <img
+          className={classes.sun}
+          src="/svgs/sole-hook.svg"
         />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <img
+          className={`${classes.cloud} ${classes.c1}`}
+          src="/svgs/nuvola-disegnata.svg"
+        />
+        <img
+          className={`${classes.cloud} ${classes.c2}`}
+          src="/svgs/nuvola-disegnata.svg"
+        />
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5
+          }}
+          className={classes.titleContainer}
+        >
+          <p className={classes.p1}>Scuola</p>
+          <p className={classes.p2}>Almarosa Rech</p>
+          <p className={classes.vdc}>Villa del Conte</p>
+        </motion.div>
+        <motion.img
+          className={`${classes.hill}`}
+          src="/svgs/collina.svg"
+          initial={{
+            opacity: 0,
+            y: +30,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0
+          }}
+          transition={{
+            duration: 0.5
+          }}
+        />
+        <motion.img
+          className={`${classes.children}`}
+          src="/svgs/bambini.svg"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 1,
+            duration: 0.5
+          }}
+        />
+      </div>
+      <motion.div className={classes.yearsContainer} style={{ y: y }}>
+        <img className={classes.topEdge} src="/svgs/bordo.svg" />
+        <div className={classes.yearsSection}>
+          {/* Nido */}
+          <YearFlower title={"Nido"} description={"Da 12 a 36 mesi"} delay={0} />
+          <YearFlower title={"Primavera"} description={"Da 2 a 3 anni"} delay={0.3} />
+          <YearFlower title={"Infanzia"} description={"Da 3 a 6 anni"} delay={0.6} />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <img className={classes.bottomEdge} src="/svgs/bordo.svg" />
+      </motion.div>
+    </main>
   );
 }
+
+export default HomePage;
