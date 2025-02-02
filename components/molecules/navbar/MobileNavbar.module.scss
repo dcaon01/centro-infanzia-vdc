@@ -1,0 +1,113 @@
+.mobileNavbarContainer {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #ff9900;
+    z-index: 20;
+    border-bottom: solid 2px white;
+    border-radius: 0px 0px 10px 10px;
+    filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.5));
+
+    .headerSection {
+        box-sizing: border-box;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        color: white;
+
+        .menu {
+            position: relative;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            border-radius: 5px;
+        }
+
+        span {
+            position: absolute;
+            background-color: white;
+            width: 30px;
+            height: 2px;
+            border-radius: 1px;
+            display: block;
+            transition: transform 0.5s, width 0.5s;
+        }
+
+        .menu:hover {
+            cursor: pointer;
+        }
+
+
+        .line1 {
+            transform: translateY(-10px);
+        }
+
+        .menu .toggleLine1 {
+            transform: translateY(0px) rotate(45deg);
+        }
+
+        .menu .toggleLine2 {
+            width: 0%;
+        }
+
+        .line3 {
+            transform: translateY(10px);
+        }
+
+        .menu .toggleLine3 {
+            transform: translateY(0px) rotate(-45deg);
+        }
+    }
+
+    .linkSection {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 20px;
+
+        .linkContainer {
+            background-color: #eb7800;
+            border: solid 2px white;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-radius: 10px;
+            justify-content: center;
+
+            .link {
+                background-color: #eb7800;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                color: white;
+                padding: 3px 0px;
+                border-top: solid 1px white;
+            }
+
+            .link:hover {
+                cursor: pointer;
+                background-color: #ff9900;
+            }
+
+            .top {
+                border-top: 0px;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 650px) {
+    .mobileNavbarContainer {
+        display: none;
+    }
+}

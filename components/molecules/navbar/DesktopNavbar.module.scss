@@ -1,4 +1,4 @@
-.navbarContainer {
+.desktopNavbarContainer {
     position: absolute;
     top: 20px;
     display: flex;
@@ -9,7 +9,7 @@
     z-index: 20;
 }
 
-.navbar {
+.desktopNavbar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,4 +39,10 @@
 .right {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 650px) {
+    .desktopNavbarContainer {
+        display: none;
+    }
 }

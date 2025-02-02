@@ -215,6 +215,7 @@
   }
 }
 
+// Width media queries
 @media (max-width: 1200px) {
   .hookContainer {
     .c1 {
@@ -223,7 +224,6 @@
 
     .c2 {
       width: 200px;
-      animation: rightEntering 0.5s ease-out, move1 4.5s ease-in-out 0.5s infinite reverse;
     }
 
     .children {
@@ -232,6 +232,68 @@
 
     .hill {
       height: 550px;
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .hookContainer {
+    height: 100vh;
+
+    .c1 {
+      width: 230px;
+      left: 10px;
+      top: 60vh;
+    }
+
+    .c2 {
+      width: 180px;
+    }
+
+    .children {
+      height: 230px;
+    }
+
+    .hill {
+      height: 500px;
+    }
+  }
+
+  .titleContainer {
+    top: -30px
+  }
+}
+
+// Last width media Query
+@media (max-width: 650px) or (max-height: 500px) {
+  .hookContainer {
+
+    .c1 {
+      width: 200px;
+      left: -30px;
+      top: 60vh;
+    }
+
+    .c2 {
+      width: 180px;
+      right: -10px;
+    }
+
+    .children {
+      right: 70px
+    }
+
+    .hill {
+      height: 500px;
+      right: -100px;
+    }
+
+    .sun {
+      height: 220px;
+      top: 20px;
+      left: -50px;
+      width: 300px;
     }
   }
 }
