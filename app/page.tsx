@@ -41,8 +41,8 @@ const HomePage = () => {
           }}
           className={classes.titleContainer}
         >
-          <p className={classes.p1}>Scuola</p>
-          <p className={classes.p2}>Almarosa Rech</p>
+          <h2 className={classes.p1}>Scuola</h2>
+          <h1 className={classes.p2}>Almarosa Rech</h1>
           <p className={classes.vdc}>Villa del Conte</p>
         </motion.div>
         <motion.img
@@ -86,7 +86,7 @@ const HomePage = () => {
         <img className={classes.bottomEdge} src="/svgs/bordo.svg" />
       </motion.div>
       <div className={classes.pageContent}>
-        <h1>Benvenuti!</h1>
+        <h2>Benvenuti!</h2>
         <p>
           Il personale della Scuola Almarosa Rech di Villa del Conte vi dà il benvenuto!
           Su questo sito potete trovare tutte le informazioni che state cercando sulla nostra struttura.

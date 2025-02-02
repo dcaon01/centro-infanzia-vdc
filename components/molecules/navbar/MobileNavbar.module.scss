@@ -99,7 +99,12 @@
             }
 
             .top {
+                border-radius: 10px 10px 0 0;
                 border-top: 0px;
+            }
+
+            .bottom {
+                border-radius: 0 0 10px 10px;
             }
         }
 

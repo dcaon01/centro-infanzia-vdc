@@ -27,8 +27,17 @@ main {
 }
 
 h1 {
+  color: white;
+  font-weight: 800;
+  text-shadow: 2px 2px 0px #024c81;
+  margin: 0;
   font-size: 3rem;
+}
+
+h2 {
   color: #1baff5;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 h3 {

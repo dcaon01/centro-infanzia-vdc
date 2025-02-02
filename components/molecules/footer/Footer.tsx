@@ -1,5 +1,9 @@
 import classes from "./Footer.module.scss";
 
+/**
+ * Component that renders the footer
+ * @returns the rendering pf the footer
+ */
 const Footer = () => {
     return (
         <div className={classes.footerContainer}>
@@ -43,7 +47,7 @@ const Footer = () => {
             </div>
             <div className={classes.anchor}>
                 <p>Copyright &#169; 2025</p>
-                <p>Parrocchia di Villa del Conte</p>
+                <p>&nbsp;Parrocchia di Villa del Conte</p>
                 <p className={classes.dash}>&nbsp;-&nbsp;</p>
                 <p>Credits by Damiano Caon</p>
             </div>

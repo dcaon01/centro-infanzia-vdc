@@ -4,7 +4,7 @@ import { useState } from "react";
 import classes from "./MobileNavbar.module.scss";
 import { AnimatePresence, motion, useAnimate } from "motion/react";
 import Link from "next/link";
-import BlackOpaqueBackground from "@/components/atoms/BlackOpaqueBackground";
+import BlackOpaqueBackground from "@/components/atoms/black-opaque-background/BlackOpaqueBackground";
 
 /**
  * Desktop navbar.
@@ -87,7 +87,7 @@ const MobileNavbar = () => {
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/regolamento"}>Regolamento</Link>
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/menu"}>Menù</Link>
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/modulistica"}>Modulistica</Link>
-                                <Link className={`${classes.link}`} onClick={handleMenuDropDown} href={"/contatti"}>Contatti</Link>
+                                <Link className={`${classes.link} ${classes.bottom}`} onClick={handleMenuDropDown} href={"/contatti"}>Contatti</Link>
                             </div>
                         </motion.div>
                     }
