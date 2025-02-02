@@ -23,7 +23,7 @@ const BlackOpaqueBackground: React.FC<props> = ({ funct }) => {
                 position: "fixed",
                 top: "0px",
                 left: "0px",
-                zIndex: 9,
+                zIndex: 19,
                 backgroundColor: "black"
             }}
             onClick={funct}

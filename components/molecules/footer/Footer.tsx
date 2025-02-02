@@ -42,7 +42,9 @@ const Footer = () => {
                 </div>
             </div>
             <div className={classes.anchor}>
-                <p>Copyright &#169; 2025 Parrocchia di Villa del Conte - Credits by Damiano Caon</p>
+                <p>Copyright &#169; 2025 Parrocchia di Villa del Conte</p>
+                <p className={classes.dash}>&nbsp;-&nbsp;</p>
+                <p>Credits by Damiano Caon</p>
             </div>
         </div>
     );
