@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description: "Sito web della scuola materna Almarosa Rech di Villa del Conte",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
