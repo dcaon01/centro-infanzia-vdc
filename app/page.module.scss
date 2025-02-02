@@ -268,14 +268,17 @@
 // Last width media Query
 @media (max-width: 650px) or (max-height: 500px) {
   .hookContainer {
+    min-height: 500px;
 
     .c1 {
+      display: none;
       width: 200px;
       left: -30px;
-      top: 60vh;
+      top: 300px;
     }
 
     .c2 {
+      top: 70px;
       width: 180px;
       right: -10px;
     }
@@ -286,14 +289,21 @@
 
     .hill {
       height: 500px;
-      right: -100px;
     }
 
     .sun {
       height: 220px;
       top: 20px;
-      left: -50px;
+      left: -100px;
       width: 300px;
+    }
+
+    .p1 {
+      font-size: 2rem;
+    }
+
+    .p2 {
+      font-size: 2.5rem;
     }
   }
 }
