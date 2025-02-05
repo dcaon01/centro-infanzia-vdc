@@ -41,9 +41,9 @@ const HomePage = () => {
           }}
           className={classes.titleContainer}
         >
-          <h2 className={classes.p1}>Scuola</h2>
-          <h1 className={classes.p2}>Almarosa Rech</h1>
-          <p className={classes.vdc}>Villa del Conte</p>
+          <h2 className={classes.p1}>Centro Infanzia</h2>
+          <p className={classes.vdc}>Suor</p>
+          <h1 className={classes.p2}>ALMAROSA RECH</h1>
         </motion.div>
         <motion.img
           className={`${classes.hill}`}
