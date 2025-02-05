@@ -134,6 +134,9 @@
 }
 
 .pageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   position: relative;
   padding-left: 10%;
   padding-right: 10%;

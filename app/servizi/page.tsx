@@ -1,3 +1,4 @@
+import PageHeader from "@/components/atoms/page-header/PageHeader";
 import classes from "./page.module.scss";
 
 /**
@@ -7,9 +8,7 @@ import classes from "./page.module.scss";
 const ServicesPage = () => {
     return (
         <main>
-            <div className={classes.titleContainer}>
-                <h1>Servizi</h1>
-            </div>
+            <PageHeader title="Servizi" />
             <div className={classes.pageContent}>
                 
             </div>

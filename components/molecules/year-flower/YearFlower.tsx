@@ -3,6 +3,7 @@ import React from "react";
 import classes from "./YearFlower.module.scss";
 import { Sour_Gummy } from "next/font/google";
 import { spring } from "motion";
+import { useRouter } from "next/navigation";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
 
 interface props {
@@ -11,8 +12,26 @@ interface props {
     delay: number
 }
 
+/**
+ * Displays the flowers with the years preview and link to the
+ * relative page.
+ * @param props
+ * @returns the render of the component.
+ */
 const YearFlower: React.FC<props> = ({ title, description, delay }) => {
     const flowerContentDelay = delay + 0.7 + 0.5;
+    /**
+     * To redirect to the right pages.
+     */
+    const router = useRouter();
+
+    /**
+     * Redirects to the gallery page.
+     */
+    function redirectTo() {
+        const yearSubpath: string = title.toLowerCase();
+        router.push(`/${yearSubpath}`);
+    }
 
     return (
         <div className={classes.year}
@@ -54,7 +73,7 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
                     {title}
                 </h3>
                 <p className={classes.description}>{description}</p>
-                <button className={`${classes.discoverButton} ${sour_gummy.className}`} >
+                <button className={`${classes.discoverButton} ${sour_gummy.className}`} onClick={redirectTo}>
                    Scopri
                 </button>
             </motion.div>

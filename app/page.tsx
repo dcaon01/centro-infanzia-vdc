@@ -88,7 +88,7 @@ const HomePage = () => {
       <div className={classes.pageContent}>
         <h2>Benvenuti!</h2>
         <p>
-          Il personale della Scuola Almarosa Rech di Villa del Conte vi dà il benvenuto!
+          Il personale del <b>Centro Infanzia Suor Almarosa Rech</b> di Villa del Conte vi dà il benvenuto!
           Su questo sito potete trovare tutte le informazioni che state cercando sulla nostra struttura.
         </p>
       </div>
