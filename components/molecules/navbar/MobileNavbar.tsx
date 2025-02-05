@@ -28,7 +28,6 @@ const MobileNavbar = () => {
         }
     }
 
-    
     /**
      * Function tha handles the deselection of a menu.
      */
@@ -46,9 +45,6 @@ const MobileNavbar = () => {
         animate("div", { opacity: 1 }, { duration: 0.3 });
     }
 
-    /**
-     * Render.
-     */
     return (
         <>
             <motion.div className={classes.mobileNavbarContainer}>
