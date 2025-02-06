@@ -7,6 +7,7 @@ import Masonry from "react-masonry-css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { motion } from "motion/react";
+import { spring } from "motion";
 
 /**
  * Array of images
@@ -62,7 +63,7 @@ const SpringPage = () => {
             <PageHeader title="Primavera" />
             <div className={classes.pageContent}>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2}}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
@@ -75,6 +76,10 @@ const SpringPage = () => {
                             whileInView={{
                                 y: 0,
                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
                             }}
                             viewport={{ once: true }}
                             key={i}

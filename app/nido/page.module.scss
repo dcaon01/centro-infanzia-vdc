@@ -4,3 +4,27 @@
     gap: 20px;
     position: relative;
 }
+
+.masonryGrid {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    max-width: 100%;
+    gap: 50px;
+}
+
+.masonryColumn {
+    background-clip: padding-box;
+}
+
+.images {
+    max-width: 100%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.lightBox {
+    overflow: hidden;
+}

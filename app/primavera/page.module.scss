@@ -32,3 +32,9 @@
 .lightBox {
     overflow: hidden;
 }
+
+@media (max-width: 650px) {
+    .masonryGrid {
+        gap: 10px;
+    }
+}

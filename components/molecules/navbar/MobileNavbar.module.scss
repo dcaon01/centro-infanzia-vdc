@@ -22,6 +22,10 @@
         padding: 7px 20px;
         color: white;
 
+        p {
+            font-size: 1.5rem;
+        }
+
         .menu {
             position: relative;
             height: 40px;
@@ -72,7 +76,8 @@
     .linkSection {
         width: 100%;
         box-sizing: border-box;
-        padding: 5px 20px;
+        padding-left: 20px;
+        padding-right: 20px;
 
         .linkContainer {
             background-color: #eb7800;
@@ -91,6 +96,7 @@
                 color: white;
                 padding: 3px 0px;
                 border-top: solid 1px white;
+                font-size: 1.2rem;
             }
 
             .link:hover {
