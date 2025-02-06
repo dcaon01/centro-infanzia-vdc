@@ -6,7 +6,7 @@ import classes from "./Footer.module.scss";
  */
 const Footer = () => {
     return (
-        <div className={classes.footerContainer}>
+        <div className={classes.footerContainer} id="footer">
             <div className={classes.footerInfo}>
                 <div className={classes.footerInfoComponent}>
                     <h4>Indirizzo</h4>
