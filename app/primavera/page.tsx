@@ -34,6 +34,8 @@ const images = [
     { src: "/images/spring/22.jpg" },
     { src: "/images/spring/23.jpg" },
     { src: "/images/spring/24.jpg" },
+    { src: "/images/childhood/1.jpg" },
+    { src: "/images/childhood/2.jpg" },
 ]
 
 /**
