@@ -9,9 +9,6 @@ import "yet-another-react-lightbox/styles.css";
 import { motion } from "motion/react";
 import { spring } from "motion";
 
-/**
- * Array of images
- */
 const images = [
     { src: "/images/spring/1.jpg" },
     { src: "/images/spring/2.jpg" },

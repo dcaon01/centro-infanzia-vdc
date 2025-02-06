@@ -8,9 +8,40 @@ import "yet-another-react-lightbox/styles.css";
 import { motion } from "motion/react";
 import Lightbox from "yet-another-react-lightbox";
 
-const images = [
-    { src: "/images/nursery/1."}
+const babies = [
+    { src: "/images/nursery/babies/1.jpg" },
+    { src: "/images/nursery/babies/2.jpg" },
+    { src: "/images/nursery/babies/3.jpg" },
+    { src: "/images/nursery/babies/4.jpg" },
+    { src: "/images/nursery/babies/5.jpg" },
+    { src: "/images/nursery/babies/6.jpg" },
+    { src: "/images/nursery/babies/7.jpg" },
+    { src: "/images/nursery/babies/8.jpg" },
+    { src: "/images/nursery/babies/9.jpg" },
+    { src: "/images/nursery/babies/10.jpg" },
+    { src: "/images/nursery/babies/11.jpg" },
+    { src: "/images/nursery/babies/12.jpg" }
 ]
+
+const over12months = [
+    { src: "/images/nursery/over12months/1.jpg" },
+    { src: "/images/nursery/over12months/2.jpg" },
+    { src: "/images/nursery/over12months/3.jpg" },
+    { src: "/images/nursery/over12months/4.jpg" },
+    { src: "/images/nursery/over12months/5.jpg" },
+    { src: "/images/nursery/over12months/6.jpg" },
+    { src: "/images/nursery/over12months/7.jpg" },
+    { src: "/images/nursery/over12months/8.jpg" },
+    { src: "/images/nursery/over12months/9.jpg" },
+    { src: "/images/nursery/over12months/10.jpg" },
+    { src: "/images/nursery/over12months/11.jpg" },
+    { src: "/images/nursery/over12months/12.jpg" },
+    { src: "/images/nursery/over12months/13.jpg" },
+    { src: "/images/nursery/over12months/14.jpg" },
+    { src: "/images/nursery/over12months/15.jpg" },
+]
+
+const images = babies.concat(over12months);
 
 /**
  * Renders the Nuersery page.
@@ -35,12 +66,13 @@ const NurseryPage = () => {
         <main>
             <PageHeader title="Nido" />
             <div className={classes.pageContent}>
-            <Masonry
+                <h2>Lattanti</h2>
+                <Masonry
                     breakpointCols={{ default: 3, 768: 2, 480: 2 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
-                    {images.map((image, i) => (
+                    {babies.map((image, i) => (
                         <motion.img
                             initial={{
                                 y: +100,
@@ -48,7 +80,7 @@ const NurseryPage = () => {
                             }}
                             whileInView={{
                                 y: 0,
-                               opacity: 1
+                                opacity: 1
                             }}
                             viewport={{ once: true }}
                             key={i}
@@ -59,7 +91,32 @@ const NurseryPage = () => {
                         />
                     ))}
                 </Masonry>
-                <Lightbox noScroll={{disabled: true}} open={isBoxOpen} index={index} close={() => setIsBoxOpen(false)} slides={images} />
+                <h2>Sopra i 12 mesi</h2>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {babies.map((image, i) => (
+                        <motion.img
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <Lightbox noScroll={{ disabled: true }} open={isBoxOpen} index={index} close={() => setIsBoxOpen(false)} slides={images} />
             </div>
         </main>
     );
