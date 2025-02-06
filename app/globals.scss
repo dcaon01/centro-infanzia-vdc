@@ -12,6 +12,11 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  overflow-y: hidden;
+  width: 100%;
+}
+
 p {
   margin: 0px;
   overflow-wrap: normal;
