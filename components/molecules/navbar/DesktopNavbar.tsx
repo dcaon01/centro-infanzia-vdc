@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import classes from "./DesktopNavbar.module.scss";
 
@@ -6,8 +8,16 @@ import classes from "./DesktopNavbar.module.scss";
  * @returns the desktop navbar render.
  */
 const DesktopNavbar = () => {
+
+    /**
+     * Scroll into view of the footer.
+     */
+    function scrollToFooter() {
+        document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
+    }
+
     return (
-        <div 
+        <div
             className={classes.desktopNavbarContainer}
         >
             <nav className={classes.desktopNavbar}>
@@ -15,9 +25,9 @@ const DesktopNavbar = () => {
                 <Link className={classes.link} href={"/servizi"}>Servizi</Link>
                 <Link className={classes.link} href={"/progettazione"}>Progettazione</Link>
                 <Link className={classes.link} href={"/regolamento"}>Regolamento</Link>
-                <Link className={classes.link} href={"/menu"}>Menù</Link>
+                <Link className={classes.link} href={"/menu"}>Pasti</Link>
                 <Link className={classes.link} href={"/modulistica"}>Modulistica</Link>
-                <Link className={`${classes.link} ${classes.right}`} href={"/contatti"}>Contatti</Link>
+                <span className={`${classes.link} ${classes.right}`} onClick={scrollToFooter}>Contatti</span>
             </nav>
         </div>
     );

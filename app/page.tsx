@@ -41,9 +41,9 @@ const HomePage = () => {
           }}
           className={classes.titleContainer}
         >
-          <h2 className={classes.p1}>Scuola</h2>
-          <h1 className={classes.p2}>Almarosa Rech</h1>
-          <p className={classes.vdc}>Villa del Conte</p>
+          <h2 className={classes.p1}>Centro Infanzia</h2>
+          <p className={classes.vdc}>Suor</p>
+          <h1 className={classes.p2}>ALMAROSA RECH</h1>
         </motion.div>
         <motion.img
           className={`${classes.hill}`}
@@ -88,7 +88,7 @@ const HomePage = () => {
       <div className={classes.pageContent}>
         <h2>Benvenuti!</h2>
         <p>
-          Il personale della Scuola Almarosa Rech di Villa del Conte vi dà il benvenuto!
+          Il personale del <b>Centro Infanzia Suor Almarosa Rech</b> di Villa del Conte vi dà il benvenuto!
           Su questo sito potete trovare tutte le informazioni che state cercando sulla nostra struttura.
         </p>
       </div>
