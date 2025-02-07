@@ -19,7 +19,7 @@ interface props {
  * @returns the render of the component.
  */
 const YearFlower: React.FC<props> = ({ title, description, delay }) => {
-    const flowerContentDelay = delay + 0.7 + 0.5;
+    const flowerContentDelay = delay + 0.5 + 0.2;
     /**
      * To redirect to the right pages.
      */
@@ -49,7 +49,7 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.7,
+                    duration: 0.5,
                     delay: delay,
                     type: spring
                 }}

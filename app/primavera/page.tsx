@@ -62,19 +62,20 @@ const SpringPage = () => {
             <PageHeader title="Primavera" />
             <div className={classes.pageContent}>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2}}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
                     {images.map((image, i) => (
                         <motion.img
+                            layoutId= {`${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
                             }}
                             whileInView={{
                                 y: 0,
-                               opacity: 1
+                                opacity: 1
                             }}
                             transition={{
                                 duration: 0.5,
@@ -89,7 +90,7 @@ const SpringPage = () => {
                         />
                     ))}
                 </Masonry>
-                <Lightbox noScroll={{disabled: true}} open={isBoxOpen} index={index} close={() => setIsBoxOpen(false)} slides={images} />
+                <Lightbox noScroll={{ disabled: true }} open={isBoxOpen} index={index} close={() => setIsBoxOpen(false)} slides={images} />
             </div>
         </main>
     );

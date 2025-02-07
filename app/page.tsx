@@ -119,8 +119,8 @@ const HomePage = () => {
         <div className={classes.yearsSection}>
           {/* Nido */}
           <YearFlower title={"Nido"} description={"Da 12 a 36 mesi"} delay={0} />
-          <YearFlower title={"Primavera"} description={"Da 2 a 3 anni"} delay={0.3} />
-          <YearFlower title={"Infanzia"} description={"Da 3 a 6 anni"} delay={0.6} />
+          <YearFlower title={"Primavera"} description={"Da 2 a 3 anni"} delay={0.1} />
+          <YearFlower title={"Infanzia"} description={"Da 3 a 6 anni"} delay={0.2} />
         </div>
         <img className={classes.bottomEdge} src="/svgs/bordo.svg" />
       </motion.div>
