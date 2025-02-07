@@ -16,7 +16,6 @@
     display: flex;
     max-width: 100%;
     gap: 50px;
-    padding-top: 30px;
 }
 
 .masonryColumn {
@@ -33,6 +32,10 @@
 
 .lightBox {
     overflow: hidden;
+}
+
+.divisor {
+    padding-top: 30px;
 }
 
 @media (max-width: 650px) {
