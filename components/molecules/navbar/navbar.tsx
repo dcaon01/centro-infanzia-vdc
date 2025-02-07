@@ -1,25 +1,17 @@
-'use client'
+import DesktopNavbar from "./DesktopNavbar";
+import MobileNavbar from "./MobileNavbar";
 
-import Link from "next/link";
-import classes from "./Navbar.module.scss";
-import { motion } from "framer-motion";
-
+/**
+ * Wrapper fot the two types of navbar.
+ * @returns the navbar render.
+ */
 const Navbar = () => {
-    return (
-        <motion.div 
-            className={classes.navbarContainer}
-        >
-            <nav className={classes.navbar}>
-                <Link className={`${classes.link} ${classes.left}`} href={"/"}>Home</Link>
-                <Link className={classes.link} href={"/servizi"}>Servizi</Link>
-                <Link className={classes.link} href={"/progettazione"}>Progettazione</Link>
-                <Link className={classes.link} href={"/regolamento"}>Regolamento</Link>
-                <Link className={classes.link} href={"/menu"}>Menù</Link>
-                <Link className={classes.link} href={"/modulistica"}>Modulistica</Link>
-                <Link className={`${classes.link} ${classes.right}`} href={"/contatti"}>Contatti</Link>
-            </nav>
-        </motion.div>
+    return ( 
+        <>
+            <DesktopNavbar />
+            <MobileNavbar />
+        </> 
     );
-};
+}
 
 export default Navbar;

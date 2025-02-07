@@ -2,6 +2,7 @@ html {
   width: 100%;
   padding: 0px;
   margin: 0px;
+  overflow-x: auto;
 }
 
 body {
@@ -9,6 +10,11 @@ body {
   padding: 0px;
   margin: 0px;
   overflow-x: hidden;
+}
+
+main {
+  overflow-y: hidden;
+  width: 100%;
 }
 
 p {
@@ -22,19 +28,53 @@ main {
   display: flex;
   width: 100%;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+  text-shadow: 2px 2px 0px #024c81;
+  margin: 0;
+  font-size: 3.2rem;
+}
+
+h2 {
   color: #1baff5;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+h4 {
   font-size: 1.5rem;
   margin: 0;
 }
 
 .pageContent {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 2.7rem
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
 }

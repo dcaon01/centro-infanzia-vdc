@@ -1,0 +1,42 @@
+.pageContent {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow-y: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #5c5c5c;
+}
+
+.masonryGrid {
+    display: flex;
+    max-width: 100%;
+    gap: 50px;
+    padding-top: 30px;
+}
+
+.masonryColumn {
+    background-clip: padding-box;
+}
+
+.images {
+    max-width: 100%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.lightBox {
+    overflow: hidden;
+}
+
+@media (max-width: 650px) {
+    .masonryGrid {
+        gap: 10px;
+    }
+}

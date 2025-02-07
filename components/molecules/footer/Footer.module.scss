@@ -5,33 +5,43 @@
     filter: drop-shadow(5px 0px 10px rgba(0,0,0,0.5));
     padding: 0;
 
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .footerInfo {
         background-color: #ff9900;
         position: relative;
         bottom: 0px;
-        width: 100%;
         display: grid;
-        align-items: center;
+        align-items: start;
         justify-content: space-between;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 2fr 3fr 2fr;
         padding: 30px 0;
         border-bottom: solid 2px white;
     
         .footerInfoComponent {
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: normal;
             align-items: center;
             flex-grow: 1;
             color: white;
             flex-direction: column;
-            gap: 20px;
+            gap: 10px;
+            height: 100%;
     
             .footerInfoComponentContent {
                 display: flex;
-                align-items: center;
                 flex-direction: column;
                 justify-content: center;
-                font-size: 1.1rem;
+                align-items: center;
+                //font-size: 1.1rem;
 
                 .social {   
                     display: flex;
@@ -42,7 +52,7 @@
                 }
 
                 .socialLogo {
-                    height: 20px;
+                    height: 18px;
                 }
             }
         }
@@ -64,3 +74,39 @@
     }
 }
 
+// Media queries
+@media (max-width: 650px) {
+    .footerContainer {
+        p {
+            font-size: 1rem;
+        }
+
+        .footerInfo {
+            padding: 0px 20px;
+            grid-template-columns: 1fr;
+
+            .footerInfoComponent {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                height: auto;
+            }    
+
+            .central {
+                border-left: 0px;
+                border-right: 0px;
+                border-top: solid 2px white;
+                border-bottom: solid 2px white;
+            }
+        }
+
+        .anchor {
+            flex-direction: column;
+            padding: 10px 20px;
+            justify-content: center;
+
+            .dash {
+                display: none;
+            }
+        }
+    }
+}

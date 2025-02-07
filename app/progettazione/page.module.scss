@@ -1,0 +1,13 @@
+.pageContent {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow-y: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #5c5c5c;
+}
