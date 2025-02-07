@@ -38,6 +38,11 @@ const images = [
     { src: "/images/childhood/2.jpg" },
 ]
 
+const activities = images.slice(0, 13);
+const playGround = images.slice(13, 21);
+const bathsAndChanging = images.slice(21, 24);
+const dining = images.slice(24);
+
 /**
  * Renders the Nuersery page.
  * @returns the render of the component.
@@ -61,14 +66,105 @@ const SpringPage = () => {
         <main>
             <PageHeader title="Primavera" />
             <div className={classes.pageContent}>
+                <h3>Attività</h3>
                 <Masonry
                     breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
-                    {images.map((image, i) => (
+                    {activities.map((image, i) => (
                         <motion.img
-                            layoutId= {`${i}`}
+                            layoutId= {`activities-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h3>Area ricreativa</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {playGround.map((image, i) => (
+                        <motion.img
+                            layoutId= {`playGround-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h3>Servizi e fasciatoi</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {bathsAndChanging.map((image, i) => (
+                        <motion.img
+                            layoutId= {`bathsAndChanging-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h3>Sala da pranzo</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {dining.map((image, i) => (
+                        <motion.img
+                            layoutId= {`dining-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
