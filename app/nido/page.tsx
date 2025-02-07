@@ -5,7 +5,7 @@ import classes from "./page.module.scss";
 import PageHeader from "@/components/atoms/page-header/PageHeader";
 import Masonry from "react-masonry-css";
 import "yet-another-react-lightbox/styles.css";
-import { motion } from "motion/react";
+import { motion, spring } from "motion/react";
 import Lightbox from "yet-another-react-lightbox";
 
 const babies = [
@@ -68,12 +68,13 @@ const NurseryPage = () => {
             <div className={classes.pageContent}>
                 <h2>Lattanti</h2>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
                     {babies.map((image, i) => (
                         <motion.img
+                            layoutId= {`${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -81,6 +82,10 @@ const NurseryPage = () => {
                             whileInView={{
                                 y: 0,
                                 opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
                             }}
                             viewport={{ once: true }}
                             key={i}
@@ -93,7 +98,7 @@ const NurseryPage = () => {
                 </Masonry>
                 <h2>Sopra i 12 mesi</h2>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >

@@ -20,7 +20,7 @@ const Footer = () => {
                     <div className={classes.footerInfoComponentContent}>
                         <p><b>Telefono:</b> <a href="tel:+390495744064">049 574 4064</a></p>
                         {/* <p><b>Email:</b></p> */}
-                        <p><b>Email: </b><a href="mailto:">centroinfanziasuoralmarosarech@gmail.com</a></p>
+                        <p><b>Email: </b><a href="mailto:centroinfanziasuoralmarosarech@gmail.com">centroinfanziasuoralmarosarech@gmail.com</a></p>
                         <p><b>Partita IVA:</b> 02717180281</p>
                     </div>
                 </div>

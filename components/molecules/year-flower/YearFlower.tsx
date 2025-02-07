@@ -19,7 +19,7 @@ interface props {
  * @returns the render of the component.
  */
 const YearFlower: React.FC<props> = ({ title, description, delay }) => {
-    const flowerContentDelay = delay + 0.5 + 0.2;
+    const flowerContentDelay = delay + 0.5 + 0.3;
     /**
      * To redirect to the right pages.
      */
@@ -36,7 +36,7 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
     return (
         <div className={classes.year}
         >
-            <motion.img className={classes.flower} src="/svgs/fiore.svg" layoutId="flower"
+            <motion.img className={classes.flower} src="/svgs/fiore.svg" layoutId={`flower-${title}`}
                 initial={{
                     bottom: 0,
                     height: '0%',
@@ -56,7 +56,7 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
             />
             <img className={classes.land} src="/svgs/terreno.svg" />
             <motion.div 
-                className={classes.titleDescriptionSection} layoutId="titleDescriptionSection"
+                className={classes.titleDescriptionSection} layoutId={`titleDescriptionSection-${title}`}
                 initial={{
                     opacity: 0
                 }}
