@@ -37,29 +37,29 @@ const ChildhoodPage = () => {
         <main>
             <PageHeader title="Infanzia" />
             <div className={classes.pageContent}>
-                <h2>Cos'è la scuola d'infanzia?</h2>
-                <p>La scuola d’infanzia si rivolge a tutti i bambini e bambine di età compresa tra i tre e i sei anni.</p>
+                <h2>Cos&apos;è la scuola d&apos;infanzia?</h2>
+                <p>La scuola d&apos;infanzia si rivolge a tutti i bambini e bambine di età compresa tra i tre e i sei anni.</p>
                 <p>
-                    La scuola dell’infanzia concorre all’educazione e allo sviluppo affettivo, sociale, psicomotorio,
+                    La scuola dell&apos;infanzia concorre all&apos;educazione e allo sviluppo affettivo, sociale, psicomotorio,
                     cognitivo e religioso dei bambini promuovendone le potenzialità di relazione, autonomia,
-                    creatività, apprendimento e mira ad assicurare un’effettiva uguaglianza delle opportunità
+                    creatività, apprendimento e mira ad assicurare un&apos;effettiva uguaglianza delle opportunità
                     educative. Nel rispetto del ruolo educativo dei genitori, contribuisce alla formazione integrale dei
                     bambini e realizza la continuità educativa con il nido e la scuola primaria.
                 </p>
                 <p>
-                    Nella scuola dell’infanzia l’apprendimento avviene attraverso l’esplorazione, il contatto con gli
-                    oggetti, la natura, l’arte, il territorio in una dimensione ludica.
-                    Le metodologie didattiche fanno riferimento all’esperienza concreta, all’esplorazione, alla
+                    Nella scuola dell&apos;infanzia l&apos;apprendimento avviene attraverso l&apos;esplorazione, il contatto con gli
+                    oggetti, la natura, l&apos;arte, il territorio in una dimensione ludica.
+                    Le metodologie didattiche fanno riferimento all&apos;ìesperienza concreta, all&apos;esplorazione, alla
                     scoperta, al gioco, al procedere per tentativi ed errori, alla conversazione e al confronto tra pari e
-                    con l’adulto. Molto importanti sono le routine che regolano i ritmi della giornata e aiutano i
+                    con l&apos;adulto. Molto importanti sono le routine che regolano i ritmi della giornata e aiutano i
                     bambini ad orientarsi rispetto allo scorrere del tempo e potenziano le loro competenze personali,
                     cognitive, affettive e comunicative. Ampio spazio viene riservato al gioco durante il quale i bambini
                     si esprimono, raccontano, rielaborano in modo creativo le esperienze personali e sociali.
                 </p>
                 <p>
-                    L’osservazione da parte dei docenti rappresenta uno strumento fondamentale per accompagnare
+                    L&apos;osservazione da parte dei docenti rappresenta uno strumento fondamentale per accompagnare
                     il bambino nel suo sviluppo integrale; la documentazione serve a tenere traccia dei progressi
-                    dell’apprendimento individuale e di gruppo; la verifica documenta i processi di crescita di ciascun
+                    dell&apos;apprendimento individuale e di gruppo; la verifica documenta i processi di crescita di ciascun
                     bambini.
                 </p>
                 <Masonry
