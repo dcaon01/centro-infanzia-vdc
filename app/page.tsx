@@ -26,10 +26,49 @@ const HomePage = () => {
     <main>
       <div className={classes.hookContainer}>
         <motion.div className={classes.shadowBox} style={{ opacity: opacity }} />
-        <img className={classes.sun} src="/svgs/sole-hook.svg" />
-        <img className={`${classes.cloud} ${classes.c1}`} src="/svgs/nuvola-disegnata.svg" />
-        <img className={`${classes.cloud} ${classes.c2}`} src="/svgs/nuvola-disegnata.svg" />
-        <motion.div
+          <motion.img 
+            className={classes.sun} 
+            layoutId="sun"
+            src="/svgs/sole-hook.svg" 
+            animate={{
+              transform: ["scale(1)", "scale(1.1)"]
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeOut",
+              repeat: Infinity,
+              repeatType: "reverse"
+            }}
+          />
+          <motion.img 
+            className={`${classes.cloud} ${classes.c1}`} 
+            src="/svgs/nuvola-disegnata.svg" 
+            layoutId="c1"
+            animate={{
+              transform: ["translateY(0)", "translateY(-3vh)"]
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "reverse"
+            }}
+          />
+          <motion.img 
+            className={`${classes.cloud} ${classes.c2}`} 
+            src="/svgs/nuvola-disegnata.svg" 
+            layoutId="c2"
+            animate={{
+              transform: ["translateY(0)", "translateY(-3vh)"]
+            }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "reverse"
+            }}
+          />
+        <motion.div layoutId="titleContainer"
           initial={{
             opacity: 0,
           }}
@@ -45,7 +84,7 @@ const HomePage = () => {
           <p className={classes.vdc}>Suor</p>
           <h1 className={classes.p2}>ALMAROSA RECH</h1>
         </motion.div>
-        <motion.img
+        <motion.img layoutId="hill"
           className={`${classes.hill}`}
           src="/svgs/collina.svg"
           initial={{
@@ -60,7 +99,7 @@ const HomePage = () => {
             duration: 0.5
           }}
         />
-        <motion.img
+        <motion.img layoutId="children"
           className={`${classes.children}`}
           src="/svgs/bambini.svg"
           initial={{
@@ -75,7 +114,7 @@ const HomePage = () => {
           }}
         />
       </div>
-      <motion.div className={classes.yearsContainer} style={{ y: y }}>
+      <motion.div className={classes.yearsContainer} style={{ y: y }} layoutId="yearsContainer">
         <img className={classes.topEdge} src="/svgs/bordo.svg" />
         <div className={classes.yearsSection}>
           {/* Nido */}

@@ -36,7 +36,7 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
     return (
         <div className={classes.year}
         >
-            <motion.img className={classes.flower} src="/svgs/fiore.svg" 
+            <motion.img className={classes.flower} src="/svgs/fiore.svg" layoutId="flower"
                 initial={{
                     bottom: 0,
                     height: '0%',
@@ -56,7 +56,7 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
             />
             <img className={classes.land} src="/svgs/terreno.svg" />
             <motion.div 
-                className={classes.titleDescriptionSection}
+                className={classes.titleDescriptionSection} layoutId="titleDescriptionSection"
                 initial={{
                     opacity: 0
                 }}

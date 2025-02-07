@@ -3,6 +3,8 @@ import "./globals.scss";
 import Navbar from "@/components/molecules/navbar/Navbar";
 import { Sour_Gummy } from "next/font/google";
 import Footer from "@/components/molecules/footer/Footer";
+import { Suspense } from "react";
+import Loader from "@/components/atoms/loader/loader";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -23,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sour_gummy.className}`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <Suspense fallback={<Loader />}>
+          <Navbar />
+          {children}
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

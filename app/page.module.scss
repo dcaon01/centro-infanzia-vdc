@@ -24,20 +24,23 @@
   }
 
   .c1 {
+    will-change: transform, opacity;
     width: 280px;
     left: 5vw;
     top: 50vh;
-    animation: leftEntering 0.5s ease-out, move1 5s ease-in-out 0.5s infinite;
+    animation: leftEntering 0.5s ease-out;
   }
 
   .c2 {
+    will-change: transform, opacity;
     right: 5vw;
     top: 5vh;
     width: 250px;
-    animation: rightEntering 0.5s ease-out, move1 4.5s ease-in-out 0.5s infinite reverse;
+    animation: rightEntering 0.5s ease-out;
   }
 
   .hill {
+    will-change: transform, opacity;
     position: absolute;
     bottom: 0px;
     height: 600px;
@@ -46,6 +49,7 @@
   }
 
   .children {
+    will-change: transform, opacity;
     position: absolute;
     z-index: 2;
     height: 300px;
@@ -54,12 +58,13 @@
   }
 
   .sun {
+    will-change: transform, opacity;
     position: absolute;
     z-index: 1;
     top: -50px;
     left: -50px;
     width: 300px;
-    animation: topEntering 0.5s ease-out, pulsing 10s ease-in-out 0.5s infinite;
+    animation: topEntering 0.5s ease-out;
   }
 }
 
@@ -146,19 +151,19 @@
 }
 
 // Animations
-@keyframes move1 {
-  0% {
-    transform: translateY(0);
-  }
+// @keyframes move1 {
+//   0% {
+//     transform: translateY(0);
+//   }
 
-  50% {
-    transform: translateY(-3vh);
-  }
+//   50% {
+//     transform: translateY(-3vh);
+//   }
 
-  100% {
-    transform: translateY(0);
-  }
-}
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
 
 @keyframes leftEntering {
   0% {
@@ -196,27 +201,27 @@
   }
 }
 
-@keyframes pulsing {
-  0% {
-    transform: scale(1);
-  }
+// @keyframes pulsing {
+//   0% {
+//     transform: scale(1);
+//   }
 
-  25% {
-    transform: scale(1.1);
-  }
+//   25% {
+//     transform: scale(1.1);
+//   }
 
-  50% {
-    transform: scale(1);
-  }
+//   50% {
+//     transform: scale(1);
+//   }
 
-  75% {
-    transform: scale(1.1);
-  }
+//   75% {
+//     transform: scale(1.1);
+//   }
 
-  100% {
-    transform: scale(1);
-  }
-}
+//   100% {
+//     transform: scale(1);
+//   }
+// }
 
 // Width media queries
 @media (max-width: 1200px) {

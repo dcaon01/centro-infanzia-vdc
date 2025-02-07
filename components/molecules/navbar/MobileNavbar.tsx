@@ -21,8 +21,9 @@ const MobileNavbar = () => {
      */
     function handleMenuDropDown(): void {
         if (isMenuDroppedDown) {
-            setIsMenuDropdown(false);
             animate("div", { opacity: 0 }, { duration: 0.3 });
+            setTimeout(() => {}, 300);
+            setIsMenuDropdown(false);
         } else {
             setIsMenuDropdown(true);
         }
@@ -34,6 +35,7 @@ const MobileNavbar = () => {
     function handleMenuDeselection(): void {
         if (isMenuDroppedDown) {
             animate("div", { opacity: 0 }, { duration: 0.3 });
+            setTimeout(() => {}, 300);
             setIsMenuDropdown(false);
         }
     }

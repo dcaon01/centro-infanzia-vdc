@@ -1,5 +1,6 @@
 import PageHeader from "@/components/atoms/page-header/PageHeader";
 import classes from "./page.module.scss";
+import Loader from "@/components/atoms/loader/loader";
 
 /**
  * Component that renders the service page
@@ -10,7 +11,6 @@ const ServicesPage = () => {
         <main>
             <PageHeader title="Servizi" />
             <div className={classes.pageContent}>
-                
             </div>
         </main>
     );
