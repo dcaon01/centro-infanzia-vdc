@@ -1,0 +1,24 @@
+.pageContent {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow-y: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #5c5c5c;
+    min-height: 100vh;
+}
+
+.link  {
+    text-decoration: none;
+    color: #5c5c5c;
+
+    &:hover {
+        color: black;
+        text-decoration: underline;
+    }
+}

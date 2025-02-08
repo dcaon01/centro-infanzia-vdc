@@ -18,9 +18,10 @@ const Footer = () => {
                 <div className={`${classes.footerInfoComponent} ${classes.central}`}>
                     <h4>Contatti</h4>
                     <div className={classes.footerInfoComponentContent}>
-                        <p>Telefono: <a href="tel:+390495744064">049 574 4064</a></p>
-                        <p>Email: <a href="mailto:">centroinfanziasuoralmarosarech@gmail.com</a></p>
-                        <p>Partita IVA: 2323232323</p>
+                        <p><b>Telefono:</b> <a href="tel:+390495744064">049 574 4064</a></p>
+                        {/* <p><b>Email:</b></p> */}
+                        <p className={classes.email}><b>Email:</b><a href="mailto:centroinfanziasuoralmarosarech@gmail.com"> centroinfanziasuoralmarosarech@gmail.com</a></p>
+                        <p><b>Partita IVA:</b> 02717180281</p>
                     </div>
                 </div>
                 <div className={classes.footerInfoComponent}>
@@ -28,19 +29,19 @@ const Footer = () => {
                     <div className={classes.footerInfoComponentContent}>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/whatsapp.svg" />
-                            <p><a href="">Whatsapp</a></p>
+                            <p><a href="https://wa.me/393899026864">Whatsapp</a></p>
                         </div>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/telegram.svg" />
-                            <p><a href="">Telegram</a></p>
+                            <p><a href="https://t.me/+zwJCShp4OcxlMTM8" target="_blank" rel="noopener noreferrer">Telegram</a></p>
                         </div>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/instagram.svg" />
-                            <p><a href="">Instagram</a></p>
+                            <p><a href="https://www.instagram.com/centroinfanziasuoralmarosarech?igsh=c3JtaTF0azI3NHNo" target="_blank" rel="noopener noreferrer">Instagram</a></p>
                         </div>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/facebook.svg" />
-                            <p><a href="">Facebook</a></p>
+                            <p><a href="https://www.facebook.com/share/15mqguQvAn/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a></p>
                         </div>
                     </div>
                 </div>
@@ -49,7 +50,7 @@ const Footer = () => {
                 <p>Copyright &#169; 2025</p>
                 <p>&nbsp;Parrocchia di Villa del Conte</p>
                 <p className={classes.dash}>&nbsp;-&nbsp;</p>
-                <p>Credits by <a href="https://campsite.bio/damon">Damiano Caon</a></p>
+                <p>Created by <a href="https://campsite.bio/damon">Damiano Caon</a></p>
             </div>
         </div>
     );

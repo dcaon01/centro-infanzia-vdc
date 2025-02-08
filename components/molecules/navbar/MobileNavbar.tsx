@@ -21,8 +21,9 @@ const MobileNavbar = () => {
      */
     function handleMenuDropDown(): void {
         if (isMenuDroppedDown) {
-            setIsMenuDropdown(false);
             animate("div", { opacity: 0 }, { duration: 0.3 });
+            setTimeout(() => {}, 300);
+            setIsMenuDropdown(false);
         } else {
             setIsMenuDropdown(true);
         }
@@ -34,6 +35,7 @@ const MobileNavbar = () => {
     function handleMenuDeselection(): void {
         if (isMenuDroppedDown) {
             animate("div", { opacity: 0 }, { duration: 0.3 });
+            setTimeout(() => {}, 300);
             setIsMenuDropdown(false);
         }
     }
@@ -47,7 +49,7 @@ const MobileNavbar = () => {
 
     return (
         <>
-            <motion.div className={classes.mobileNavbarContainer}>
+            <motion.div className={classes.mobileNavbarContainer} id="mobileNav">
                 <div className={classes.headerSection}>
                     <p>Menu</p>
                     <div className={classes.menu} onClick={handleMenuDropDown}>
@@ -60,6 +62,7 @@ const MobileNavbar = () => {
                     {
                         isMenuDroppedDown &&
                         <motion.div
+                            layout
                             className={classes.linkSection}
                             initial={{
                                 margin: 0,
@@ -84,7 +87,7 @@ const MobileNavbar = () => {
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/servizi"}>Servizi</Link>
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/progettazione"}>Progettazione</Link>
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/regolamento"}>Regolamento</Link>
-                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/menu"}>Pasti</Link>
+                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/pasti"}>Pasti</Link>
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/modulistica"}>Modulistica</Link>
                                 <Link className={`${classes.link} ${classes.bottom}`} onClick={handleMenuDropDown} href={"#footer"}>Contatti</Link>
                             </div>
