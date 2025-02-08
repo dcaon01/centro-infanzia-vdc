@@ -62,6 +62,7 @@ const MobileNavbar = () => {
                     {
                         isMenuDroppedDown &&
                         <motion.div
+                            layout
                             className={classes.linkSection}
                             initial={{
                                 margin: 0,
