@@ -33,15 +33,15 @@ const Footer = () => {
                         </div>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/telegram.svg" />
-                            <p><a href="https://t.me/+zwJCShp4OcxlMTM8">Telegram</a></p>
+                            <p><a href="https://t.me/+zwJCShp4OcxlMTM8" target="_blank" rel="noopener noreferrer">Telegram</a></p>
                         </div>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/instagram.svg" />
-                            <p><a href="https://www.instagram.com/centroinfanziasuoralmarosarech?igsh=c3JtaTF0azI3NHNo">Instagram</a></p>
+                            <p><a href="https://www.instagram.com/centroinfanziasuoralmarosarech?igsh=c3JtaTF0azI3NHNo" target="_blank" rel="noopener noreferrer">Instagram</a></p>
                         </div>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/facebook.svg" />
-                            <p><a href="https://www.facebook.com/share/15mqguQvAn/?mibextid=wwXIfr">Facebook</a></p>
+                            <p><a href="https://www.facebook.com/share/15mqguQvAn/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a></p>
                         </div>
                     </div>
                 </div>

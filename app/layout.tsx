@@ -9,7 +9,7 @@ const sour_gummy = Sour_Gummy({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Scuola Almarosa Rech",
-  description: "Sito web della scuola materna Almarosa Rech di Villa del Conte",
+  description: "Sito web del centro infanzia suor Almarosa Rech di Villa del Conte",
 };
 
 export const viewport = {
