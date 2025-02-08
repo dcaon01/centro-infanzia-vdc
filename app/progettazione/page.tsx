@@ -21,7 +21,7 @@ const PlanningPage = () => {
         <main>
             <PageHeader title="Progettazione"/>
             <div className={classes.pageContent}>
-                <p>Di seguito, potete scaricare il documento riportante le informazioni riguardanti l'offerta formativa del nostro centro.</p>
+                <p>Di seguito, potete scaricare il documento riportante le informazioni riguardanti l&apos;offerta formativa del nostro centro.</p>
                 <div className={classes.previewContainer}>
                     <img className={classes.documentPreview} src="/images/documents-previews/progettazione.png" onClick={handleDocumentDownload}/>
                 </div>

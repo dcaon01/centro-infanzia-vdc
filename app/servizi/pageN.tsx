@@ -1,6 +1,5 @@
 import PageHeader from "@/components/atoms/page-header/PageHeader";
 import classes from "./page.module.scss";
-import Loader from "@/components/atoms/loader/loader";
 
 /**
  * Component that renders the service page

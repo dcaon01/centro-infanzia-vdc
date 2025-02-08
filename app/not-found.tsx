@@ -3,7 +3,6 @@
 
 import Link from "next/link";
 import classes from "./not-found.module.scss";
-import { useEffect } from "react";
 
 /**
  * Page the manage the page that are not found.
