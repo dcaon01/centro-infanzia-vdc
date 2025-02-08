@@ -12,7 +12,7 @@ const DesktopNavbar = () => {
     /**
      * Scroll into view of the footer.
      */
-    function scrollToFooter() {
+    function scrollToFooter(): void {
         document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
     }
 
