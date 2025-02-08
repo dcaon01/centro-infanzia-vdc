@@ -1,0 +1,29 @@
+.notFound {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #a4a4a4;
+    min-height: 500px;
+    height: 100vh;
+    width: 100%;
+
+    .notFoundImage {
+        height: 200px;
+    }
+
+    h1 {
+        color: white;
+        text-shadow: none;
+    }
+
+    p {
+        color: white;
+    }
+
+    .backHome {
+        color: white;
+        user-select: none;
+    }
+}

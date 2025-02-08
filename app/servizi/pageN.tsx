@@ -10,7 +10,6 @@ const ServicesPage = () => {
         <main>
             <PageHeader title="Servizi" />
             <div className={classes.pageContent}>
-                
             </div>
         </main>
     );

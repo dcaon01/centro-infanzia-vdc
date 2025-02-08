@@ -1,0 +1,60 @@
+.pageContent {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow-y: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #5c5c5c;
+}
+
+.previewContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .documentPreview {
+        border: solid 2px #5c5c5c;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.dbContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .downloadButton {
+        width: 40%;
+        background-color: #ff9900;
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 1.5rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #eb7800;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .dbContainer {
+        .downloadButton {
+            width: 60%;
+        }
+    }
+}

@@ -12,11 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  overflow-y: hidden;
-  width: 100%;
-}
-
 p {
   margin: 0px;
   overflow-wrap: normal;
@@ -28,6 +23,7 @@ main {
   display: flex;
   width: 100%;
   flex-direction: column;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -48,6 +44,7 @@ h2 {
 h3 {
   font-size: 1.8rem;
   margin: 0;
+  color: #5c5c5c;
 }
 
 h4 {

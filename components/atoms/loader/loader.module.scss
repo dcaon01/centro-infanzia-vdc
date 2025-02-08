@@ -1,0 +1,55 @@
+.allViewContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+
+    .loadingContainer {
+        animation: rotates 3s linear infinite;
+        width: 110px;
+        height: 110px;
+    
+        .loadingCircle {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke-width: 10;
+            stroke: #eb7800;
+            stroke-linecap: round;
+            transform: translate(5px, 5px);
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+            box-shadow: none;
+            animation: filling 1s linear infinite;
+        }
+    }
+}
+
+@keyframes filling {
+    100% {
+        stroke-dashoffset: 400;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    51%{
+        stroke-dashoffset: 800;
+    }
+    100% {
+        stroke-dashoffset: 400;
+    }
+}
+
+@keyframes rotates {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+

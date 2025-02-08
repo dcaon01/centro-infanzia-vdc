@@ -5,7 +5,7 @@ import classes from "./page.module.scss";
 import PageHeader from "@/components/atoms/page-header/PageHeader";
 import Masonry from "react-masonry-css";
 import "yet-another-react-lightbox/styles.css";
-import { motion } from "motion/react";
+import { motion, spring } from "motion/react";
 import Lightbox from "yet-another-react-lightbox";
 
 const babies = [
@@ -22,6 +22,10 @@ const babies = [
     { src: "/images/nursery/babies/11.jpg" },
     { src: "/images/nursery/babies/12.jpg" }
 ]
+
+const babiesPlayground = babies.slice(0, 7);
+const babiesDiningRoom = babies.slice(7, 10);
+const babiesChanging = babies.slice(10);
 
 const over12months = [
     { src: "/images/nursery/over12months/1.jpg" },
@@ -40,6 +44,11 @@ const over12months = [
     { src: "/images/nursery/over12months/14.jpg" },
     { src: "/images/nursery/over12months/15.jpg" },
 ]
+
+const overPlayground= over12months.slice(0, 3);
+const overAcceptance = over12months.slice(3, 11);
+const overDining = over12months.slice(11, 13);
+const overBaths = over12months.slice(13);
 
 const images = babies.concat(over12months);
 
@@ -67,13 +76,106 @@ const NurseryPage = () => {
             <PageHeader title="Nido" />
             <div className={classes.pageContent}>
                 <h2>Lattanti</h2>
+                <h3>Area ricreativa</h3>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
-                    {babies.map((image, i) => (
+                    {babiesPlayground.map((image, i) => (
                         <motion.img
+                            layoutId= {`babiesPlayground-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h3>Sala da pranzo</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {babiesDiningRoom.map((image, i) => (
+                        <motion.img
+                            layoutId= {`babiesDiningRoom-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h3>Fasciatoi</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {babiesChanging.map((image, i) => (
+                        <motion.img
+                            layoutId= {`babiesChanging-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h2>Sopra i 12 mesi</h2>
+                <h3>Area ricreativa</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {overPlayground.map((image, i) => (
+                        <motion.img
+                            layoutId= {`overPlayground-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -91,14 +193,67 @@ const NurseryPage = () => {
                         />
                     ))}
                 </Masonry>
-                <h2>Sopra i 12 mesi</h2>
+                <h3>Zona accoglienza</h3>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
-                    {babies.map((image, i) => (
+                    {overAcceptance.map((image, i) => (
                         <motion.img
+                            layoutId= {`overAcceptance-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h3>Sala da pranzo</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {overDining.map((image, i) => (
+                        <motion.img
+                            layoutId= {`overDining-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h3>Servizi</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {overBaths.map((image, i) => (
+                        <motion.img
+                            layoutId= {`overBaths-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
