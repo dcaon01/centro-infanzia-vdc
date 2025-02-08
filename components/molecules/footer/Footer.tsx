@@ -29,7 +29,7 @@ const Footer = () => {
                     <div className={classes.footerInfoComponentContent}>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/whatsapp.svg" />
-                            <p><a href="">Whatsapp</a></p>
+                            <p><a href="https://wa.me/393899026864">Whatsapp</a></p>
                         </div>
                         <div className={classes.social}>
                             <img className={classes.socialLogo} src="/svgs/telegram.svg" />
@@ -50,7 +50,7 @@ const Footer = () => {
                 <p>Copyright &#169; 2025</p>
                 <p>&nbsp;Parrocchia di Villa del Conte</p>
                 <p className={classes.dash}>&nbsp;-&nbsp;</p>
-                <p>Credits by <a href="https://campsite.bio/damon">Damiano Caon</a></p>
+                <p>Created by <a href="https://campsite.bio/damon">Damiano Caon</a></p>
             </div>
         </div>
     );

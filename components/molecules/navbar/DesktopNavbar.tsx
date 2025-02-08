@@ -26,7 +26,7 @@ const DesktopNavbar = () => {
                 <Link className={classes.link} href={"/servizi"}>Servizi</Link>
                 <Link className={classes.link} href={"/progettazione"}>Progettazione</Link>
                 <Link className={classes.link} href={"/regolamento"}>Regolamento</Link>
-                <Link className={classes.link} href={"/menu"}>Pasti</Link>
+                <Link className={classes.link} href={"/pasti"}>Pasti</Link>
                 <Link className={classes.link} href={"/modulistica"}>Modulistica</Link>
                 <span className={`${classes.link} ${classes.right}`} onClick={scrollToFooter}>Contatti</span>
             </nav>
