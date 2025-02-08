@@ -19,6 +19,7 @@ const DesktopNavbar = () => {
     return (
         <div
             className={classes.desktopNavbarContainer}
+            id="desktopNav"
         >
             <nav className={classes.desktopNavbar}>
                 <Link className={`${classes.link} ${classes.left}`} href={"/"}>Home</Link>

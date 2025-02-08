@@ -49,7 +49,7 @@ const MobileNavbar = () => {
 
     return (
         <>
-            <motion.div className={classes.mobileNavbarContainer}>
+            <motion.div className={classes.mobileNavbarContainer} id="mobileNav">
                 <div className={classes.headerSection}>
                     <p>Menu</p>
                     <div className={classes.menu} onClick={handleMenuDropDown}>
