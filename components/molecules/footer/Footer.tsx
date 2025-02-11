@@ -21,6 +21,7 @@ const Footer = () => {
                         <p><b>Telefono:</b> <a href="tel:+390495744064">049 574 4064</a></p>
                         {/* <p><b>Email:</b></p> */}
                         <p className={classes.email}><b>Email:</b><a href="mailto:centroinfanziasuoralmarosarech@gmail.com"> centroinfanziasuoralmarosarech@gmail.com</a></p>
+                        <p><b>Cellulare</b>:  <a href="tel:+393899026864">389 902 6864</a></p>
                         <p><b>Partita IVA:</b> 02717180281</p>
                     </div>
                 </div>

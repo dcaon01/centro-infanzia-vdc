@@ -84,7 +84,7 @@ const MobileNavbar = () => {
                         >
                             <div className={classes.linkContainer} style={{ opacity: 0 }}>
                                 <Link className={`${classes.link} ${classes.top}`} onClick={handleMenuDropDown} href={"/"}>Home</Link>
-                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/servizi"}>Servizi</Link>
+                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/carta-servizi"}>Carta dei servizi</Link>
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/progettazione"}>Progettazione</Link>
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/regolamento"}>Regolamento</Link>
                                 <Link className={classes.link} onClick={handleMenuDropDown} href={"/pasti"}>Pasti</Link>

@@ -43,16 +43,14 @@ const images = [
     { src: "/images/childhood/33.jpg" },
     { src: "/images/childhood/34.jpg" },
     { src: "/images/childhood/35.jpg" },
-    { src: "/images/childhood/36.jpg" },
 ]
 
 const activities = images.slice(0, 11);
 const rooms = images.slice(11, 19);
 const dining = images.slice(19, 21);
-const kitchen = images.slice(27, 29);
 const externals = images.slice(21, 27);
-const baths = images.slice(29, 32);
-const gym = images.slice(32);
+const baths = images.slice(27, 30);
+const gym = images.slice(30);
 
 const ChildhoodPage = () => {
     // To open the lightbox.
@@ -71,7 +69,7 @@ const ChildhoodPage = () => {
 
     return (
         <main>
-            <PageHeader title="Infanzia" />
+            <PageHeader title="Scuola dell'infanzia" />
             <div className={classes.pageContent}>
                 <h2>Cos&apos;è la scuola d&apos;infanzia?</h2>
                 <p>La scuola d&apos;infanzia si rivolge a tutti i bambini e bambine di età compresa tra i tre e i sei anni.</p>
@@ -100,7 +98,7 @@ const ChildhoodPage = () => {
                 </p>
                 <h3 className={classes.divisor}>Attività</h3>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
@@ -124,9 +122,9 @@ const ChildhoodPage = () => {
                         />
                     ))}
                 </Masonry>
-                <h3 className={classes.divisor}>Aule</h3>
+                <h3 className={classes.divisor}>Contesti educativi</h3>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
@@ -152,7 +150,7 @@ const ChildhoodPage = () => {
                 </Masonry>
                 <h3 className={classes.divisor}>Sala da pranzo</h3>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
@@ -176,35 +174,9 @@ const ChildhoodPage = () => {
                         />
                     ))}
                 </Masonry>
-                <h3 className={classes.divisor}>Cucina</h3>
+                <h3 className={classes.divisor}>Giardino</h3>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
-                    className={classes.masonryGrid}
-                    columnClassName={classes.masonryColumn}
-                >
-                    {kitchen.map((image, i) => (
-                        <motion.img
-                            layoutId= {`kitchen-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
-                            key={i}
-                            src={image.src}
-                            alt=""
-                            onClick={() => openLightbox(i)}
-                            className={classes.images}
-                        />
-                    ))}
-                </Masonry>
-                <h3 className={classes.divisor}>Esterni</h3>
-                <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
@@ -230,7 +202,7 @@ const ChildhoodPage = () => {
                 </Masonry>
                 <h3 className={classes.divisor}>Servizi</h3>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >
@@ -256,7 +228,7 @@ const ChildhoodPage = () => {
                 </Masonry>
                 <h3 className={classes.divisor}>Palestra</h3>
                 <Masonry
-                    breakpointCols={{ default: 3, 768: 2, 480: 2 }}
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
                     columnClassName={classes.masonryColumn}
                 >

@@ -23,7 +23,8 @@ const babies = [
     { src: "/images/nursery/babies/12.jpg" }
 ]
 
-const babiesPlayground = babies.slice(0, 7);
+const welcoming = babies.slice(0,1);
+const babiesPlayground = babies.slice(1, 7);
 const babiesDiningRoom = babies.slice(7, 10);
 const babiesChanging = babies.slice(10);
 
@@ -45,8 +46,8 @@ const over12months = [
     { src: "/images/nursery/over12months/15.jpg" },
 ]
 
-const overPlayground= over12months.slice(0, 3);
-const overAcceptance = over12months.slice(3, 11);
+const overPlayground= over12months.slice(0, 4);
+const overAcceptance = over12months.slice(4, 11);
 const overDining = over12months.slice(11, 13);
 const overBaths = over12months.slice(13);
 
@@ -75,8 +76,38 @@ const NurseryPage = () => {
         <main>
             <PageHeader title="Nido" />
             <div className={classes.pageContent}>
-                <h2>Lattanti</h2>
-                <h3>Area ricreativa</h3>
+                <h2>Lattanti - Da 3 a 12 mesi</h2>
+                <h3>Accoglienza</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {welcoming.map((image, i) => (
+                        <motion.img
+                            layoutId= {`welcoming-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h3>Contesti educativi</h3>
                 <Masonry
                     breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
@@ -166,8 +197,8 @@ const NurseryPage = () => {
                         />
                     ))}
                 </Masonry>
-                <h2>Sopra i 12 mesi</h2>
-                <h3>Area ricreativa</h3>
+                <h2>Dai 12 mesi ai 36 mesi</h2>
+                <h3>Contesti educativi</h3>
                 <Masonry
                     breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
@@ -271,6 +302,7 @@ const NurseryPage = () => {
                         />
                     ))}
                 </Masonry>
+                {/* Calcolare gli indici per visualizzare le immagini che clicchiamo */}
                 <Lightbox noScroll={{ disabled: true }} open={isBoxOpen} index={index} close={() => setIsBoxOpen(false)} slides={images} />
             </div>
         </main>

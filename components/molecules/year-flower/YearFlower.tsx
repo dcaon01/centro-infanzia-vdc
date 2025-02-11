@@ -29,7 +29,20 @@ const YearFlower: React.FC<props> = ({ title, description, delay }) => {
      * Redirects to the gallery page.
      */
     function redirectTo() {
-        const yearSubpath: string = title.toLowerCase();
+        let yearSubpath = "";
+        switch (title) {
+            case ("Nido"):
+                yearSubpath = "nido";
+                break;
+            case ("Sezione primavera"):
+                yearSubpath = "sezione-primavera";
+                break;
+            case ("Scuola dell'infanzia"):
+                yearSubpath = "scuola-infanzia";
+                break;
+            default:
+                break;
+        }
         router.push(`/${yearSubpath}`);
     }
 

@@ -2,12 +2,26 @@
 
 import classes from "./page.module.scss";
 import PageHeader from "@/components/atoms/page-header/PageHeader";
-import React from "react";
+import React, { useState } from "react";
 import { Sour_Gummy } from "next/font/google";
+import Masonry from "react-masonry-css";
+import { motion } from "motion/react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
+
+const images = [
+    { src: "/images/kitchen/1.jpg" },
+    { src: "/images/kitchen/2.jpg" },
+]
 
 
 const MenuPage = () => {
+    // To open the lightbox.
+    const [isBoxOpen, setIsBoxOpen] = useState(false);
+    // To keep track of the image index.
+    const [index, setIndex] = useState(0);
+
     /**
      * Manages the download of the document
      */
@@ -29,6 +43,15 @@ const MenuPage = () => {
                 window.open(undefined, "_blank", "noopener,noreferrer");
             // end
         }
+    }
+
+    /**
+     * Opens the image to visualize it better.
+     * @param i index of the image to open
+     */
+    function openLightbox(i: number) {
+        setIndex(i);
+        setIsBoxOpen(true);
     }
 
     return (
@@ -55,7 +78,7 @@ const MenuPage = () => {
                     <img
                         className={classes.documentPreview}
                         src="/images/documents-previews/a4-menu-infanzia-2024-2025-primavera-estate.png"
-                        onClick={() => handleDocumentDownload(2)} 
+                        onClick={() => handleDocumentDownload(2)}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -86,7 +109,7 @@ const MenuPage = () => {
                     <img
                         className={classes.documentPreview}
                         src="/images/documents-previews/a4-menu-nido-2024-2025-primavera-estate.png"
-                        onClick={() => handleDocumentDownload(4)} 
+                        onClick={() => handleDocumentDownload(4)}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -97,6 +120,33 @@ const MenuPage = () => {
                         Visualizza Primavera/Estate
                     </button>
                 </div>
+                <h3 className={classes.divisor}>Cucina</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {images.map((image, i) => (
+                        <motion.img
+                            layoutId={`kitchen-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <Lightbox noScroll={{ disabled: true }} open={isBoxOpen} index={index} close={() => setIsBoxOpen(false)} slides={images} />
             </div>
         </main>
     );
