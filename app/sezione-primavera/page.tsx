@@ -34,9 +34,20 @@ const images = [
     { src: "/images/spring/22.jpg" },
     { src: "/images/spring/23.jpg" },
     { src: "/images/spring/24.jpg" },
-    { src: "/images/childhood/28.jpg" },
-    { src: "/images/childhood/29.jpg" },
+    { src: "/images/childhood/20.jpg" },
+    { src: "/images/childhood/21.jpg" },
 ]
+
+const externals = [
+    { src: "/images/childhood/22.jpg" },
+    { src: "/images/childhood/23.jpg" },
+    { src: "/images/childhood/24.jpg" },
+    { src: "/images/childhood/25.jpg" },
+    { src: "/images/childhood/26.jpg" },
+    { src: "/images/childhood/27.jpg" },
+] 
+
+const totalImages = images.concat(externals)
 
 const activities = images.slice(0, 13);
 const playGround = images.slice(13, 21);
@@ -64,8 +75,31 @@ const SpringPage = () => {
 
     return (
         <main>
-            <PageHeader title="Primavera" />
+            <PageHeader title="Sezione Primavera" />
             <div className={classes.pageContent}>
+                <h2>
+                    Cos&apos;è la sezione primavera?
+                </h2>
+                <p>
+                    La sezione primavera è un servizio educativo integrato alla scuola d&apos;infanzia che si pone l&apos;obiettivo di rispondere sia alle esigenze delle famiglie sia a 
+                    quelle specifiche dei bambini tra i 24 e i 36 mesi. E&apos; un servizio di carattere sociale ed educativo, promosso al fine di garantire al bambino un equilibrato 
+                    sviluppo psico-fisico, promuovendo la socializzazione, la conquista dell&apos;autonomia, lo sviluppo delle competenze e collaborando con la famiglia 
+                    nell&apos;azione di cura ed educazione.
+                </p>
+                <p> 
+                    La sezione primavera per definizione è un servizio che si pone come obiettivo di essere parte integrante alla Scuola dell&apos;Infanzia al fine di collaborare con 
+                    essa arricchendosi a vicenda attraverso nuovi incontri, nuove esperienze, nuovi apprendimenti in un clima di partecipazione e di benessere.
+                </p>
+                <p>
+                    Il punto di forza del nostro servizio è dunque la condivisione di riferimenti teorici, coerenza del progetto educativo, intenzionalità di scelte condivise. 
+                    Una nota di riguardo va poi data alla dimensione emotivo-affettiva delle relazioni educative, quindi all&apos;importanza di assumere, da parte di educatori e insegnanti, 
+                    una “postura di ricerca” volta ad esplorare e migliorare l&apos;agire educativo. Nel strutturare lo spazio educativo abbiamo tenuto conto che deve rispondere al bisogno 
+                    del bambino di cogliere la creatività che emerge nel gioco e concretizzarla attraverso il contesto e i materiali. Per soddisfare i bisogni di rassicurazione e 
+                    contenimento emotivo gli spazi saranno caratterizzati da zone differenziate per attività e stimoli che noi definiamo contesti.
+                </p>
+                <p>
+                    Alla sezione Primavera sono ammessi i bambini che hanno compiuto i 2 anni, avranno dunque precedenza i primi 20 bambini iscritti secondo l&apos;età anagrafica.
+                </p>
                 <h3>Attività</h3>
                 <Masonry
                     breakpointCols={{ default: 3, 768: 2, 480: 1 }}
@@ -96,7 +130,7 @@ const SpringPage = () => {
                         />
                     ))}
                 </Masonry>
-                <h3>Area ricreativa</h3>
+                <h3>Contesti educativi</h3>
                 <Masonry
                     breakpointCols={{ default: 3, 768: 2, 480: 1 }}
                     className={classes.masonryGrid}
@@ -186,7 +220,37 @@ const SpringPage = () => {
                         />
                     ))}
                 </Masonry>
-                <Lightbox noScroll={{ disabled: true }} open={isBoxOpen} index={index} close={() => setIsBoxOpen(false)} slides={images} />
+                <h3>Giardino</h3>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {externals.map((image, i) => (
+                        <motion.img
+                            layoutId= {`activities-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <Lightbox noScroll={{ disabled: true }} open={isBoxOpen} index={index} close={() => setIsBoxOpen(false)} slides={totalImages} />
             </div>
         </main>
     );

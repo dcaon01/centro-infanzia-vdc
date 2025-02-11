@@ -20,34 +20,12 @@
 
     .documentPreview {
         border: solid 2px #5c5c5c;
-        width: 100%;
+        width: 40%;
 
         &:hover {
             cursor: pointer;
         }
     }
-}
-
-.masonryGrid {
-    display: flex;
-    max-width: 100%;
-    gap: 50px;
-}
-
-.masonryColumn {
-    background-clip: padding-box;
-}
-
-.images {
-    max-width: 100%;
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.lightBox {
-    overflow: hidden;
 }
 
 .dbContainer {
@@ -76,7 +54,13 @@
 @media (max-width: 650px) {
     .dbContainer {
         .downloadButton {
-            width: 100%;
+            width: 60%;
+        }
+    }
+
+    .previewContainer {
+        .documentPreview {
+            width: 60%;
         }
     }
 }

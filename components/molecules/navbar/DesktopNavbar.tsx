@@ -23,7 +23,7 @@ const DesktopNavbar = () => {
         >
             <nav className={classes.desktopNavbar}>
                 <Link className={`${classes.link} ${classes.left}`} href={"/"}>Home</Link>
-                <Link className={classes.link} href={"/servizi"}>Servizi</Link>
+                <Link className={classes.link} href={"/carta-servizi"}>Carta dei servizi</Link>
                 <Link className={classes.link} href={"/progettazione"}>Progettazione</Link>
                 <Link className={classes.link} href={"/regolamento"}>Regolamento</Link>
                 <Link className={classes.link} href={"/pasti"}>Pasti</Link>
