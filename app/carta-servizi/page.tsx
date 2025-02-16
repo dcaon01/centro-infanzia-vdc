@@ -21,7 +21,6 @@ const ServicesPage = () => {
         <main>
             <PageHeader title="Carta dei servizi" />
             <div className={classes.pageContent}>
-                <p>Di seguito, potete scaricare la carta dei servizi del nostro centro.</p>
                 <div className={classes.previewContainer}>
                     <img 
                         className={classes.documentPreview} 

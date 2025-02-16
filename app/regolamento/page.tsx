@@ -10,14 +10,13 @@ const RegulationPage = () => {
      * Manages the download of the document
      */
     function handleDocumentDownload(): void {
-        window.open("/documents/regulations/regolamento-centro-infanzia-GENNAIO-2025.pdf", "_blank", "noopener,noreferrer");
+        window.open("/documents/regulations/regolamento-centro-infanzia-FEBBRAIO-2025.pdf", "_blank", "noopener,noreferrer");
     }
 
     return (
         <main>
             <PageHeader title="Regolamento"/>
             <div className={classes.pageContent}>
-                <p>Di seguito, potete scaricare il regolamento del nostro centro.</p>
                 <div className={classes.previewContainer}>
                     <img 
                         className={classes.documentPreview} 
