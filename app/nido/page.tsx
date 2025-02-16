@@ -23,7 +23,7 @@ const babies = [
     { src: "/images/nursery/babies/12.jpg" }
 ]
 
-const welcoming = babies.slice(0,1);
+const welcoming = babies.slice(0, 1);
 const babiesPlayground = babies.slice(1, 7);
 const babiesDiningRoom = babies.slice(7, 10);
 const babiesChanging = babies.slice(10);
@@ -46,7 +46,7 @@ const over12months = [
     { src: "/images/nursery/over12months/15.jpg" },
 ]
 
-const overPlayground= over12months.slice(0, 4);
+const overPlayground = over12months.slice(0, 4);
 const overAcceptance = over12months.slice(4, 11);
 const overDining = over12months.slice(11, 13);
 const overBaths = over12months.slice(13);
@@ -76,6 +76,25 @@ const NurseryPage = () => {
         <main>
             <PageHeader title="Nido" />
             <div className={classes.pageContent}>
+                <h2>Cos&apos;è la scuola d&apos;infanzia?</h2>
+                <p>Il nostro nido rappresenta il primo luogo di socializzazione al di fuori della famiglia,
+                    dove il bambino può entrare in relazione con altri adulti di riferimento ma anche con il
+                    gruppo dei pari che con il tempo assumerà un ruolo sempre più centrale nella sua crescita e sviluppo.
+                </p>
+
+                <p>
+                    L&apos;offerta di proposte educative e differenziate andranno a stimolare la crescita e l&apos;apprendimento
+                    potenziando lo sviluppo psico-fisico dei bambini. Nel nostro nido è presente una sezione lattanti
+                    che accoglie i bambini a partire dai 3 mesi pensata per esaudire i bisogni di accudimento e
+                    sperimentazione; sono poi presenti spazi che accolgono bambini dai 12 ai 36 mesi strutturati
+                    e arredati in base alle loro esigenze di scoperta, esplorazione e crescita. 
+                </p>
+                <p> 
+                    Nel nostro servizio
+                    sono presenti due giardini differenti, uno ad uso esclusivo dei lattanti, mentre l&apos;altro utilizzato
+                    di bambini di età compresa tra i 12 e 36 mesi che risponde a bisogni di socializzazione, di
+                    contatto con la natura e scoperta di materiali.
+                </p>
                 <h2>Lattanti - Da 3 a 12 mesi</h2>
                 <h3>Accoglienza</h3>
                 <Masonry
@@ -85,7 +104,7 @@ const NurseryPage = () => {
                 >
                     {welcoming.map((image, i) => (
                         <motion.img
-                            layoutId= {`welcoming-${i}`}
+                            layoutId={`welcoming-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -115,7 +134,7 @@ const NurseryPage = () => {
                 >
                     {babiesPlayground.map((image, i) => (
                         <motion.img
-                            layoutId= {`babiesPlayground-${i}`}
+                            layoutId={`babiesPlayground-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -145,7 +164,7 @@ const NurseryPage = () => {
                 >
                     {babiesDiningRoom.map((image, i) => (
                         <motion.img
-                            layoutId= {`babiesDiningRoom-${i}`}
+                            layoutId={`babiesDiningRoom-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -175,7 +194,7 @@ const NurseryPage = () => {
                 >
                     {babiesChanging.map((image, i) => (
                         <motion.img
-                            layoutId= {`babiesChanging-${i}`}
+                            layoutId={`babiesChanging-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -206,7 +225,7 @@ const NurseryPage = () => {
                 >
                     {overPlayground.map((image, i) => (
                         <motion.img
-                            layoutId= {`overPlayground-${i}`}
+                            layoutId={`overPlayground-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -232,7 +251,7 @@ const NurseryPage = () => {
                 >
                     {overAcceptance.map((image, i) => (
                         <motion.img
-                            layoutId= {`overAcceptance-${i}`}
+                            layoutId={`overAcceptance-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -258,7 +277,7 @@ const NurseryPage = () => {
                 >
                     {overDining.map((image, i) => (
                         <motion.img
-                            layoutId= {`overDining-${i}`}
+                            layoutId={`overDining-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
@@ -284,7 +303,7 @@ const NurseryPage = () => {
                 >
                     {overBaths.map((image, i) => (
                         <motion.img
-                            layoutId= {`overBaths-${i}`}
+                            layoutId={`overBaths-${i}`}
                             initial={{
                                 y: +100,
                                 opacity: 0
