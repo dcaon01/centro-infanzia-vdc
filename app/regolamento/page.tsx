@@ -17,7 +17,6 @@ const RegulationPage = () => {
         <main>
             <PageHeader title="Regolamento"/>
             <div className={classes.pageContent}>
-                <p>Di seguito, potete scaricare il regolamento del nostro centro.</p>
                 <div className={classes.previewContainer}>
                     <img 
                         className={classes.documentPreview} 

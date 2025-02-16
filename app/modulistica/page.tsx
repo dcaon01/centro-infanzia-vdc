@@ -14,7 +14,10 @@ const ModulesPage = () => {
                 <h2>Giustifiche</h2>
                 <p>- <a href="/documents/justifications/giustificazione-assenze.pdf" target="_blank" rel="noopener noreferrer"  className={classes.link}>Giustificazione di assenza</a></p>
                 <h2>Deleghe</h2>
-                <p>- <a href="/documents/justifications/giustificazione-assenze.pdf" target="_blank" rel="noopener noreferrer"  className={classes.link}>Delega per il ritiro del bambino</a></p>
+                <p>- <a href="/documents/delegations/delega-ritiro.pdf" target="_blank" rel="noopener noreferrer"  className={classes.link}>Delega per il ritiro del bambino</a></p>
+                <h2>Diete</h2>
+                <p>- <a href="/documents/diets/moduli-diete-speciali.pdf" target="_blank" rel="noopener noreferrer"  className={classes.link}>Richiesta dieta per allergie ed intolleranze</a></p>
+                <p>- <a href="/documents/diets/motivi-etico-religiosi.pdf" target="_blank" rel="noopener noreferrer"  className={classes.link}>Richiesta dieta per motivi etico-religiosi</a></p>
             </div>
         </main>
     );
