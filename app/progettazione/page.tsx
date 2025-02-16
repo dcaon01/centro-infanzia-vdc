@@ -21,7 +21,7 @@ const PlanningPage = () => {
      * Manages the download of the document of the project.
      */
     function handleProjectDocumentDownload() {
-        window.open("/documents/planning/pps2024-2025.pdf", "_blank", "noopener,noreferrer");
+        window.open("/documents/planning/pps2024-25.pdf", "_blank", "noopener,noreferrer");
     }
 
     return (

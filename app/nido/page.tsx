@@ -76,7 +76,7 @@ const NurseryPage = () => {
         <main>
             <PageHeader title="Nido" />
             <div className={classes.pageContent}>
-                <h2>Cos&apos;è la scuola d&apos;infanzia?</h2>
+                <h2>Cos&apos;è il nido?</h2>
                 <p>Il nostro nido rappresenta il primo luogo di socializzazione al di fuori della famiglia,
                     dove il bambino può entrare in relazione con altri adulti di riferimento ma anche con il
                     gruppo dei pari che con il tempo assumerà un ruolo sempre più centrale nella sua crescita e sviluppo.
