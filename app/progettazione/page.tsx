@@ -11,28 +11,51 @@ const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
  */
 const PlanningPage = () => {
     /**
-     * Manages the download of the document
+     * Manages the download of the document of the offer.
      */
-    function handleDocumentDownload(): void {
+    function handleOfferDocumentDownload(): void {
         window.open("/documents/planning/ptof22-25.pdf", "_blank", "noopener,noreferrer");
+    }
+
+    /**
+     * Manages the download of the document of the project.
+     */
+    function handleProjectDocumentDownload() {
+        window.open("/documents/planning/pps2024-2025.pdf", "_blank", "noopener,noreferrer");
     }
 
     return (
         <main>
             <PageHeader title="Progettazione"/>
             <div className={classes.pageContent}>
-                <p>Di seguito, potete scaricare il documento riportante le informazioni riguardanti l&apos;offerta formativa del nostro centro.</p>
+                <h2>Offerta formativa</h2>
                 <div className={classes.previewContainer}>
                     <img 
                         className={classes.documentPreview} 
                         src="/images/documents-previews/progettazione.png" 
-                        onClick={handleDocumentDownload}
+                        onClick={handleOfferDocumentDownload}
+                    />
+                </div>
+                <div className={classes.dbContainer}>
+                    <button 
+                        className={`${classes.downloadButton} ${sour_gummy.className}`}
+                        onClick={handleOfferDocumentDownload}
+                    >
+                        Visualizza
+                    </button>
+                </div>
+                <h2>Progetto socio-psico pedagogico</h2>
+                <div className={classes.previewContainer}>
+                    <img 
+                        className={classes.documentPreview} 
+                        src="/images/documents-previews/pps2024-2025.png" 
+                        onClick={handleProjectDocumentDownload}
                     />
                 </div>
                 <div className={classes.dbContainer}>
                     <button 
                         className={`${classes.downloadButton} ${sour_gummy.className}`} 
-                        onClick={handleDocumentDownload}
+                        onClick={handleProjectDocumentDownload}
                     >
                         Visualizza
                     </button>
