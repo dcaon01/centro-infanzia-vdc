@@ -11,10 +11,18 @@ import BlackOpaqueBackground from "@/components/atoms/black-opaque-background/Bl
  * @returns the mobile navbar render.
  */
 const MobileNavbar = () => {
-    // To manage the menu dropdown.
+    /**
+     * To manage the menu dropdown.
+     */
     const [isMenuDroppedDown, setIsMenuDropdown] = useState(false);
-    // To detect the animation breakpoints.
+    /**
+     * To detect the animation breakpoints. 
+     */
     const [scope, animate] = useAnimate();
+    /**
+     * To manage the years dropdown. 
+     */
+    const [yearDropdown, setYearDropdown] = useState(false);
 
     /**
      * Function that modify the isMenuDroppedDown on click.
@@ -22,7 +30,7 @@ const MobileNavbar = () => {
     function handleMenuDropDown(): void {
         if (isMenuDroppedDown) {
             animate("div", { opacity: 0 }, { duration: 0.3 });
-            setTimeout(() => {}, 300);
+            setTimeout(() => { }, 300);
             setIsMenuDropdown(false);
         } else {
             setIsMenuDropdown(true);
@@ -35,9 +43,16 @@ const MobileNavbar = () => {
     function handleMenuDeselection(): void {
         if (isMenuDroppedDown) {
             animate("div", { opacity: 0 }, { duration: 0.3 });
-            setTimeout(() => {}, 300);
+            setTimeout(() => { }, 300);
             setIsMenuDropdown(false);
         }
+    }
+
+    /**
+     * Dropdowns or retrieves the dropdown menu
+     */
+    function manageYearDropdown(): void {
+        yearDropdown ? setYearDropdown(false) : setYearDropdown(true);
     }
 
     /**
@@ -83,18 +98,58 @@ const MobileNavbar = () => {
                             ref={scope}
                         >
                             <div className={classes.linkContainer} style={{ opacity: 0 }}>
-                                <Link className={`${classes.link} ${classes.top}`} onClick={handleMenuDropDown} href={"/"}>Home</Link>
-                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/carta-servizi"}>Carta dei servizi</Link>
-                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/progettazione"}>Progettazione</Link>
-                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/regolamento"}>Regolamento</Link>
-                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/pasti"}>Pasti</Link>
-                                <Link className={classes.link} onClick={handleMenuDropDown} href={"/modulistica"}>Modulistica</Link>
-                                <Link className={`${classes.link} ${classes.bottom}`} onClick={handleMenuDropDown} href={"#footer"}>Contatti</Link>
+                                <Link key="home-link" className={`${classes.link} ${classes.top}`} onClick={handleMenuDropDown} href={"/"}>Home</Link>
+                                <div className={classes.yearsDropdown} onClick={manageYearDropdown}>
+                                    <div className={classes.dropdownTrigger}>
+                                        <p>Classi</p>
+                                        <motion.svg height={10} width={10} xmlns="http://www.w3.org/2000/svg" animate={{ transform: `rotate(${yearDropdown ? 180 : 0}deg)` }} >
+                                            <polygon points="0,0 10,0 5,10" className={classes.modulesSelectorArrow} />
+                                        </motion.svg>
+                                    </div>
+                                    <AnimatePresence>
+                                        {
+                                            yearDropdown &&
+                                            <motion.div className={`${classes.yearsLinkContainer}`}
+                                                initial={{
+                                                    opacity: 0,
+                                                    height: 0,
+                                                    marginTop: 0,
+                                                    marginBottom: 0
+                                                }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    height: 90,
+                                                    marginTop: 10,
+                                                    marginBottom: 10
+                                                }}
+                                                exit={{
+                                                    opacity: 0,
+                                                    height: 0,
+                                                    marginTop: 0,
+                                                    marginBottom: 0
+                                                }}
+                                                transition={{
+                                                    duration: 0.3
+                                                }}
+                                            >
+                                                <Link key="nursery-link" onClick={handleMenuDropDown} className={classes.dropdownLink} href={"/nido"}>Nido</Link>
+                                                <Link key="spring-link" onClick={handleMenuDropDown} className={classes.dropdownLink} href={"/sezione-primavera"}>Sezione privamera</Link>
+                                                <Link key="childhood-link" onClick={handleMenuDropDown} className={classes.dropdownLink} href={"/scuola-infanzia"}>Scuola dell'infanzia</Link>
+                                            </motion.div>
+                                        }
+                                    </AnimatePresence>
+                                </div>
+                                <Link key="services-link" className={classes.link} onClick={handleMenuDropDown} href={"/carta-servizi"}>Carta dei servizi</Link>
+                                <Link key="planning-link" className={classes.link} onClick={handleMenuDropDown} href={"/progettazione"}>Progettazione</Link>
+                                <Link key="rules-link" className={classes.link} onClick={handleMenuDropDown} href={"/regolamento"}>Regolamento</Link>
+                                <Link key="lunch-link" className={classes.link} onClick={handleMenuDropDown} href={"/pasti"}>Pasti</Link>
+                                <Link key="modules-link" className={classes.link} onClick={handleMenuDropDown} href={"/modulistica"}>Modulistica</Link>
+                                <Link key="contacts-link" className={`${classes.link} ${classes.bottom}`} onClick={handleMenuDropDown} href={"#footer"}>Contatti</Link>
                             </div>
                         </motion.div>
                     }
-                </AnimatePresence>
-            </motion.div>
+                </AnimatePresence >
+            </motion.div >
             <AnimatePresence>
                 {
                     isMenuDroppedDown &&
