@@ -47,7 +47,7 @@ const over12months = [
 ]
 
 const overPlayground = over12months.slice(0, 4);
-const overAcceptance = over12months.slice(4, 11);
+const overAcceptance = over12months.slice(4, 5);
 const overDining = over12months.slice(11, 13);
 const overBaths = over12months.slice(13);
 

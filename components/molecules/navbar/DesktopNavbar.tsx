@@ -19,12 +19,12 @@ const DesktopNavbar = () => {
      * Scroll into view of the footer.
      */
     function scrollToFooter(): void {
-        manageYearDropdown();
+        yearDropdown && setYearDropdown(false);
         document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
     }
 
     /**
-     * Dropdowns or retrieves the dropdown menu
+     * Dropdowns or retrieves the dropdown menu.
      */
     function manageYearDropdown(): void {
         yearDropdown ? setYearDropdown(false) : setYearDropdown(true);
@@ -55,9 +55,9 @@ const DesktopNavbar = () => {
                                     opacity: 0
                                 }}
                             >
-                                <Link className={classes.dropdownLink} href={"/nido"} onClick={manageYearDropdown}>Nido</Link>
-                                <Link className={classes.dropdownLink} href={"/sezione-primavera"} onClick={manageYearDropdown}>Sezione primavera</Link>
-                                <Link className={classes.dropdownLink} href={"/scuola-infanzia"} onClick={manageYearDropdown}>Scuola dell'infanzia</Link>
+                                <Link className={classes.dropdownLink} href={"/nido"} onClick={() => {setYearDropdown(false)}}>Nido</Link>
+                                <Link className={classes.dropdownLink} href={"/sezione-primavera"} onClick={() => {setYearDropdown(false)}}>Sezione primavera</Link>
+                                <Link className={classes.dropdownLink} href={"/scuola-infanzia"} onClick={() => {setYearDropdown(false)}}>Scuola dell'infanzia</Link>
                             </motion.div>
                         }
                     </AnimatePresence>
@@ -66,11 +66,11 @@ const DesktopNavbar = () => {
                         <polygon points="0,0 10,0 5,10" className={classes.modulesSelectorArrow} />
                     </motion.svg>
                 </div>
-                <Link className={classes.link} href={"/carta-servizi"} onClick={manageYearDropdown}>Carta dei servizi</Link>
-                <Link className={classes.link} href={"/progettazione"} onClick={manageYearDropdown}>Progettazione</Link>
-                <Link className={classes.link} href={"/regolamento"} onClick={manageYearDropdown}>Regolamento</Link>
-                <Link className={classes.link} href={"/pasti"} onClick={manageYearDropdown}>Pasti</Link>
-                <Link className={classes.link} href={"/modulistica"} onClick={manageYearDropdown}>Modulistica</Link>
+                <Link className={classes.link} href={"/carta-servizi"} onClick={() => {setYearDropdown(false)}}>Carta dei servizi</Link>
+                <Link className={classes.link} href={"/progettazione"} onClick={() => {setYearDropdown(false)}}>Progettazione</Link>
+                <Link className={classes.link} href={"/regolamento"} onClick={() => {setYearDropdown(false)}}>Regolamento</Link>
+                <Link className={classes.link} href={"/pasti"} onClick={() => {setYearDropdown(false)}}>Pasti</Link>
+                <Link className={classes.link} href={"/modulistica"} onClick={() => {setYearDropdown(false)}}>Modulistica</Link>
                 <span className={`${classes.link} ${classes.right}`} onClick={scrollToFooter}>Contatti</span>
             </nav>
         </div>
