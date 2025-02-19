@@ -51,6 +51,14 @@ const overAcceptance = over12months.slice(4, 5);
 const overDining = over12months.slice(11, 13);
 const overBaths = over12months.slice(13);
 
+const garden = [
+    { src: "/images/nursery/garden/1.jpg" },
+    { src: "/images/nursery/garden/2.jpg" },
+    { src: "/images/nursery/garden/3.jpg" },
+    { src: "/images/nursery/garden/4.jpg" },
+    { src: "/images/nursery/garden/5.jpg" },
+]
+
 const images = babies.concat(over12months);
 
 /**
@@ -302,6 +310,32 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {overBaths.map((image, i) => (
+                        <motion.img
+                            layoutId={`overBaths-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h2>Giardino</h2>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {garden.map((image, i) => (
                         <motion.img
                             layoutId={`overBaths-${i}`}
                             initial={{
