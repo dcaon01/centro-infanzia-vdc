@@ -59,7 +59,7 @@ const garden = [
     { src: "/images/nursery/garden/5.jpg" },
 ]
 
-const images = babies.concat(over12months);
+const images = babies.concat(over12months).concat(garden);
 
 /**
  * Renders the Nuersery page.
@@ -189,7 +189,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i + 6)}
+                            onClick={() => openLightbox(i + 7)}
                             className={classes.images}
                         />
                     ))}
@@ -219,7 +219,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i + 9)}
+                            onClick={() => openLightbox(i + 10)}
                             className={classes.images}
                         />
                     ))}
@@ -246,7 +246,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i + 10)}
+                            onClick={() => openLightbox(i + 12)}
                             className={classes.images}
                         />
                     ))}
@@ -272,7 +272,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 16)}
                             className={classes.images}
                         />
                     ))}
@@ -298,7 +298,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 23)}
                             className={classes.images}
                         />
                     ))}
@@ -324,7 +324,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 25)}
                             className={classes.images}
                         />
                     ))}
@@ -350,7 +350,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 27)}
                             className={classes.images}
                         />
                     ))}

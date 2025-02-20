@@ -47,7 +47,7 @@ const externals = [
     { src: "/images/childhood/27.jpg" },
 ] 
 
-const totalImages = images.concat(externals)
+const totalImages = images.concat(externals);
 
 const activities = images.slice(0, 13);
 const playGround = images.slice(13, 21);
@@ -155,7 +155,7 @@ const SpringPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 13)}
                             className={classes.images}
                         />
                     ))}
@@ -185,7 +185,7 @@ const SpringPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 21)}
                             className={classes.images}
                         />
                     ))}
@@ -215,7 +215,7 @@ const SpringPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 24)}
                             className={classes.images}
                         />
                     ))}
@@ -245,7 +245,7 @@ const SpringPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 26)}
                             className={classes.images}
                         />
                     ))}

@@ -143,7 +143,7 @@ const ChildhoodPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 11)}
                             className={classes.images}
                         />
                     ))}
@@ -169,7 +169,7 @@ const ChildhoodPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 19)}
                             className={classes.images}
                         />
                     ))}
@@ -195,7 +195,7 @@ const ChildhoodPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 21)}
                             className={classes.images}
                         />
                     ))}
@@ -221,7 +221,7 @@ const ChildhoodPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 27)}
                             className={classes.images}
                         />
                     ))}
@@ -247,7 +247,7 @@ const ChildhoodPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 30)}
                             className={classes.images}
                         />
                     ))}
