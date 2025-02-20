@@ -3,11 +3,7 @@
 import PageHeader from "@/components/atoms/page-header/PageHeader";
 import classes from "./page.module.scss";
 import { Sour_Gummy } from "next/font/google";
-import dynamic from "next/dynamic";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
-const LazyChildren = dynamic(() => import("@/components/atoms/lazy-children/LazyChildren"), {
-    ssr: false,
-});
 
 /**
  * Component that renders the service page
