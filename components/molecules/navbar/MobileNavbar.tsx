@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import classes from "./MobileNavbar.module.scss";
 import { AnimatePresence, motion, useAnimate } from "motion/react";
-import Link from "next/link";
 import BlackOpaqueBackground from "@/components/atoms/black-opaque-background/BlackOpaqueBackground";
 
 /**
@@ -23,15 +23,23 @@ const MobileNavbar = () => {
      * To manage the years dropdown. 
      */
     const [yearDropdown, setYearDropdown] = useState(false);
+    /**
+     * To navigate imperatively
+     */
+    const router = useRouter();
 
     /**
      * Function that modify the isMenuDroppedDown on click.
      */
-    function handleMenuDropDown(): void {
+    function handleMenuDropDown(path: string): void {
         if (isMenuDroppedDown) {
             animate("div", { opacity: 0 }, { duration: 0.3 });
-            setTimeout(() => { }, 300);
             setIsMenuDropdown(false);
+            if (path !== "") {
+                setTimeout(() => {
+                    router.push(path);
+                }, 400);
+            }
         } else {
             setIsMenuDropdown(true);
         }
@@ -67,7 +75,7 @@ const MobileNavbar = () => {
             <motion.div className={classes.mobileNavbarContainer} id="mobileNav">
                 <div className={classes.headerSection}>
                     <p>Menu</p>
-                    <div className={classes.menu} onClick={handleMenuDropDown}>
+                    <div className={classes.menu} onClick={() => { handleMenuDropDown("") }}>
                         <span className={`${classes.line1} ${isMenuDroppedDown && classes.toggleLine1}`} />
                         <span className={`${isMenuDroppedDown && classes.toggleLine2}`} />
                         <span className={`${classes.line3} ${isMenuDroppedDown && classes.toggleLine3}`} />
@@ -98,7 +106,7 @@ const MobileNavbar = () => {
                             ref={scope}
                         >
                             <div className={classes.linkContainer} style={{ opacity: 0 }}>
-                                <Link key="home-link" className={`${classes.link} ${classes.top}`} onClick={handleMenuDropDown} href={"/"}>Home</Link>
+                                <a key="home-link" className={`${classes.link} ${classes.top}`} onClick={() => { handleMenuDropDown("/") }} href={"/"}>Home</a>
                                 <div className={classes.yearsDropdown} onClick={manageYearDropdown}>
                                     <div className={classes.dropdownTrigger}>
                                         <p>Classi</p>
@@ -132,19 +140,19 @@ const MobileNavbar = () => {
                                                     duration: 0.3
                                                 }}
                                             >
-                                                <Link key="nursery-link" onClick={handleMenuDropDown} className={classes.dropdownLink} href={"/nido"}>Nido</Link>
-                                                <Link key="spring-link" onClick={handleMenuDropDown} className={classes.dropdownLink} href={"/sezione-primavera"}>Sezione privamera</Link>
-                                                <Link key="childhood-link" onClick={handleMenuDropDown} className={classes.dropdownLink} href={"/scuola-infanzia"}>Scuola dell'infanzia</Link>
+                                                <a key="nursery-link" onClick={() => { handleMenuDropDown("/nido") }} className={classes.dropdownLink}>Nido</a>
+                                                <a key="spring-link" onClick={() => { handleMenuDropDown("/sezione-primavera") }} className={classes.dropdownLink}>Sezione privamera</a>
+                                                <a key="childhood-link" onClick={() => { handleMenuDropDown("/scuola-infanzia") }} className={classes.dropdownLink}>Scuola dell'infanzia</a>
                                             </motion.div>
                                         }
                                     </AnimatePresence>
                                 </div>
-                                <Link key="services-link" className={classes.link} onClick={handleMenuDropDown} href={"/carta-servizi"}>Carta dei servizi</Link>
-                                <Link key="planning-link" className={classes.link} onClick={handleMenuDropDown} href={"/progettazione"}>Progettazione</Link>
-                                <Link key="rules-link" className={classes.link} onClick={handleMenuDropDown} href={"/regolamento"}>Regolamento</Link>
-                                <Link key="lunch-link" className={classes.link} onClick={handleMenuDropDown} href={"/pasti"}>Pasti</Link>
-                                <Link key="modules-link" className={classes.link} onClick={handleMenuDropDown} href={"/modulistica"}>Modulistica</Link>
-                                <Link key="contacts-link" className={`${classes.link} ${classes.bottom}`} onClick={handleMenuDropDown} href={"#footer"}>Contatti</Link>
+                                <a key="services-link" className={classes.link} onClick={() => { handleMenuDropDown("/carta-servizi") }} >Carta dei servizi</a>
+                                <a key="planning-link" className={classes.link} onClick={() => { handleMenuDropDown("/progettazione") }} >Progettazione</a>
+                                <a key="rules-link" className={classes.link} onClick={() => { handleMenuDropDown("/regolamento") }}>Regolamento</a>
+                                <a key="lunch-link" className={classes.link} onClick={() => { handleMenuDropDown("/pasti") }} >Pasti</a>
+                                <a key="modules-link" className={classes.link} onClick={() => { handleMenuDropDown("/modulistica") }} >Modulistica</a>
+                                <a key="contacts-link" className={`${classes.link} ${classes.bottom}`} onClick={() => { handleMenuDropDown("#footer") }}>Contatti</a>
                             </div>
                         </motion.div>
                     }

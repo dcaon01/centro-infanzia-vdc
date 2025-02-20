@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 const LazyChildren = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     return (
