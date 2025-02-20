@@ -3,9 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    z-index: 30;
+    z-index: 18;
+    background-color: white;
 
     .loadingContainer {
         animation: rotates 3s linear infinite;

@@ -10,6 +10,7 @@
 }
 
 .desktopNavbar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +18,8 @@
     background-color: white;
     border: solid 2px white;
     border-radius: 10px;
+    box-sizing: content-box;
+    z-index: 20;
 }
 
 .link {
@@ -42,7 +45,51 @@
     border-bottom-right-radius: 10px;
 }
 
-@media (max-width: 683px) {
+.dropdownTrigger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    .linkText {
+        font-size: 16px;
+    }
+}
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff9900;
+    left: 30px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+
+    .dropdownLink {
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        background-color: #ff9900;
+        color: white;
+        border-radius: 3px;
+        padding: 2px 5px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #eb7800;
+        }
+    }
+}
+
+.modulesSelectorArrow {
+    fill: white;
+}
+
+@media (max-width: 780px) {
     .desktopNavbarContainer {
         display: none;
     }

@@ -47,9 +47,17 @@ const over12months = [
 ]
 
 const overPlayground = over12months.slice(0, 4);
-const overAcceptance = over12months.slice(4, 11);
+const overAcceptance = over12months.slice(4, 5);
 const overDining = over12months.slice(11, 13);
 const overBaths = over12months.slice(13);
+
+const garden = [
+    { src: "/images/nursery/garden/1.jpg" },
+    { src: "/images/nursery/garden/2.jpg" },
+    { src: "/images/nursery/garden/3.jpg" },
+    { src: "/images/nursery/garden/4.jpg" },
+    { src: "/images/nursery/garden/5.jpg" },
+]
 
 const images = babies.concat(over12months);
 
@@ -87,9 +95,9 @@ const NurseryPage = () => {
                     potenziando lo sviluppo psico-fisico dei bambini. Nel nostro nido è presente una sezione lattanti
                     che accoglie i bambini a partire dai 3 mesi pensata per esaudire i bisogni di accudimento e
                     sperimentazione; sono poi presenti spazi che accolgono bambini dai 12 ai 36 mesi strutturati
-                    e arredati in base alle loro esigenze di scoperta, esplorazione e crescita. 
+                    e arredati in base alle loro esigenze di scoperta, esplorazione e crescita.
                 </p>
-                <p> 
+                <p>
                     Nel nostro servizio
                     sono presenti due giardini differenti, uno ad uso esclusivo dei lattanti, mentre l&apos;altro utilizzato
                     di bambini di età compresa tra i 12 e 36 mesi che risponde a bisogni di socializzazione, di
@@ -151,7 +159,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 1)}
                             className={classes.images}
                         />
                     ))}
@@ -181,7 +189,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 6)}
                             className={classes.images}
                         />
                     ))}
@@ -211,7 +219,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 9)}
                             className={classes.images}
                         />
                     ))}
@@ -238,7 +246,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 10)}
                             className={classes.images}
                         />
                     ))}
@@ -302,6 +310,32 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {overBaths.map((image, i) => (
+                        <motion.img
+                            layoutId={`overBaths-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
+                <h2>Giardino</h2>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {garden.map((image, i) => (
                         <motion.img
                             layoutId={`overBaths-${i}`}
                             initial={{
