@@ -19,7 +19,9 @@ const DesktopNavbar = () => {
      * Scroll into view of the footer.
      */
     function scrollToFooter(): void {
-        yearDropdown && setYearDropdown(false);
+        if (yearDropdown) {
+            setYearDropdown(false);
+        }
         document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
     }
 
@@ -27,7 +29,11 @@ const DesktopNavbar = () => {
      * Dropdowns or retrieves the dropdown menu.
      */
     function manageYearDropdown(): void {
-        yearDropdown ? setYearDropdown(false) : setYearDropdown(true);
+        if (yearDropdown) {
+            setYearDropdown(false)
+        } else {
+            setYearDropdown(true);
+        }
     }
 
     return (
@@ -57,7 +63,7 @@ const DesktopNavbar = () => {
                             >
                                 <Link className={classes.dropdownLink} href={"/nido"} onClick={() => {setYearDropdown(false)}}>Nido</Link>
                                 <Link className={classes.dropdownLink} href={"/sezione-primavera"} onClick={() => {setYearDropdown(false)}}>Sezione primavera</Link>
-                                <Link className={classes.dropdownLink} href={"/scuola-infanzia"} onClick={() => {setYearDropdown(false)}}>Scuola dell'infanzia</Link>
+                                <Link className={classes.dropdownLink} href={"/scuola-infanzia"} onClick={() => {setYearDropdown(false)}}>Scuola dell&apos;infanzia</Link>
                             </motion.div>
                         }
                     </AnimatePresence>

@@ -60,7 +60,11 @@ const MobileNavbar = () => {
      * Dropdowns or retrieves the dropdown menu
      */
     function manageYearDropdown(): void {
-        yearDropdown ? setYearDropdown(false) : setYearDropdown(true);
+        if ( yearDropdown) {
+            setYearDropdown(false)
+        } else {
+            setYearDropdown(true);
+        }   
     }
 
     /**
@@ -142,7 +146,7 @@ const MobileNavbar = () => {
                                             >
                                                 <a key="nursery-link" onClick={() => { handleMenuDropDown("/nido") }} className={classes.dropdownLink}>Nido</a>
                                                 <a key="spring-link" onClick={() => { handleMenuDropDown("/sezione-primavera") }} className={classes.dropdownLink}>Sezione privamera</a>
-                                                <a key="childhood-link" onClick={() => { handleMenuDropDown("/scuola-infanzia") }} className={classes.dropdownLink}>Scuola dell'infanzia</a>
+                                                <a key="childhood-link" onClick={() => { handleMenuDropDown("/scuola-infanzia") }} className={classes.dropdownLink}>Scuola dell&apos;infanzia</a>
                                             </motion.div>
                                         }
                                     </AnimatePresence>
