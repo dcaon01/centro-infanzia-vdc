@@ -95,9 +95,9 @@ const NurseryPage = () => {
                     potenziando lo sviluppo psico-fisico dei bambini. Nel nostro nido è presente una sezione lattanti
                     che accoglie i bambini a partire dai 3 mesi pensata per esaudire i bisogni di accudimento e
                     sperimentazione; sono poi presenti spazi che accolgono bambini dai 12 ai 36 mesi strutturati
-                    e arredati in base alle loro esigenze di scoperta, esplorazione e crescita. 
+                    e arredati in base alle loro esigenze di scoperta, esplorazione e crescita.
                 </p>
-                <p> 
+                <p>
                     Nel nostro servizio
                     sono presenti due giardini differenti, uno ad uso esclusivo dei lattanti, mentre l&apos;altro utilizzato
                     di bambini di età compresa tra i 12 e 36 mesi che risponde a bisogni di socializzazione, di
@@ -159,7 +159,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 1)}
                             className={classes.images}
                         />
                     ))}
@@ -189,7 +189,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 6)}
                             className={classes.images}
                         />
                     ))}
@@ -219,7 +219,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 9)}
                             className={classes.images}
                         />
                     ))}
@@ -246,7 +246,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 10)}
                             className={classes.images}
                         />
                     ))}
