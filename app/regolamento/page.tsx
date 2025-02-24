@@ -2,6 +2,7 @@
 
 import classes from "./page.module.scss";
 import PageHeader from "@/components/atoms/page-header/PageHeader";
+import { motion } from "motion/react";
 import { Sour_Gummy } from "next/font/google";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
 
@@ -18,10 +19,12 @@ const RegulationPage = () => {
             <PageHeader title="Regolamento"/>
             <div className={classes.pageContent}>
                 <div className={classes.previewContainer}>
-                    <img 
+                    <motion.img 
                         className={classes.documentPreview} 
                         src="/images/documents-previews/regolamento-centro-infanzia-GENNAIO-2025.png" 
                         onClick={handleDocumentDownload}
+                        initial={{ opacity: 0 }}
+                        animate={{opacity: 1}}
                     />
                 </div>
                 <div className={classes.dbContainer}>

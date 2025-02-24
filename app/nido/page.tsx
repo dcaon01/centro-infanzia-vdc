@@ -59,7 +59,7 @@ const garden = [
     { src: "/images/nursery/garden/5.jpg" },
 ]
 
-const images = babies.concat(over12months).concat(garden);
+const images = babies.concat(over12months.slice(0,5)).concat(over12months.slice(11)).concat(garden);
 
 /**
  * Renders the Nuersery page.
