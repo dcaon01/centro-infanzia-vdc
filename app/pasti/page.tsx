@@ -15,7 +15,6 @@ const images = [
     { src: "/images/kitchen/2.jpg" },
 ]
 
-
 const MenuPage = () => {
     // To open the lightbox.
     const [isBoxOpen, setIsBoxOpen] = useState(false);
