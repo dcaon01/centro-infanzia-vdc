@@ -3,6 +3,7 @@
 import { Sour_Gummy } from "next/font/google";
 import classes from "./page.module.scss";
 import PageHeader from "@/components/atoms/page-header/PageHeader";
+import { motion } from "motion/react";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
 
 /**
@@ -30,10 +31,12 @@ const PlanningPage = () => {
             <div className={classes.pageContent}>
                 <h2>Offerta formativa</h2>
                 <div className={classes.previewContainer}>
-                    <img 
+                    <motion.img 
                         className={classes.documentPreview} 
                         src="/images/documents-previews/progettazione.png" 
                         onClick={handleOfferDocumentDownload}
+                        initial={{ opacity: 0 }}
+                        animate={{opacity: 1}}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -46,10 +49,12 @@ const PlanningPage = () => {
                 </div>
                 <h2>Progetto socio-psico pedagogico</h2>
                 <div className={classes.previewContainer}>
-                    <img 
+                    <motion.img 
                         className={classes.documentPreview} 
                         src="/images/documents-previews/pps2024-2025.png" 
                         onClick={handleProjectDocumentDownload}
+                        initial={{ opacity: 0 }}
+                        animate={{opacity: 1}}
                     />
                 </div>
                 <div className={classes.dbContainer}>

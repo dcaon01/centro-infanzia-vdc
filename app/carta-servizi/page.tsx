@@ -3,6 +3,7 @@
 import PageHeader from "@/components/atoms/page-header/PageHeader";
 import classes from "./page.module.scss";
 import { Sour_Gummy } from "next/font/google";
+import { motion } from "motion/react";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
 
 /**
@@ -22,10 +23,12 @@ const ServicesPage = () => {
             <PageHeader title="Carta dei servizi" />
             <div className={classes.pageContent}>
                 <div className={classes.previewContainer}>
-                    <img
+                    <motion.img
                         className={classes.documentPreview}
                         src="/images/documents-previews/carta-servizi.png"
                         onClick={handleDocumentDownload}
+                        initial={{ opacity: 0 }}
+                        animate={{opacity: 1}}
                     />
                 </div>
                 <div className={classes.dbContainer}>
