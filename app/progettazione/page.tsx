@@ -37,7 +37,7 @@ const PlanningPage = () => {
                         onClick={handleOfferDocumentDownload}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
+                        transition={{ duration: 0.4 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -56,7 +56,7 @@ const PlanningPage = () => {
                         onClick={handleProjectDocumentDownload}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
+                        transition={{ duration: 0.4 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>

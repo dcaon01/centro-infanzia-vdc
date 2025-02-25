@@ -65,7 +65,7 @@ const MenuPage = () => {
                         onClick={() => handleDocumentDownload(1)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
+                        transition={{ duration: 0.4 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -83,7 +83,7 @@ const MenuPage = () => {
                         onClick={() => handleDocumentDownload(2)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
+                        transition={{ duration: 0.4 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -102,7 +102,7 @@ const MenuPage = () => {
                         onClick={() => handleDocumentDownload(3)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
+                        transition={{ duration: 0.4 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -120,7 +120,7 @@ const MenuPage = () => {
                         onClick={() => handleDocumentDownload(4)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
+                        transition={{ duration: 0.4 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
