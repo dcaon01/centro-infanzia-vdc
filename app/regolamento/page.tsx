@@ -16,20 +16,21 @@ const RegulationPage = () => {
 
     return (
         <main>
-            <PageHeader title="Regolamento"/>
+            <PageHeader title="Regolamento" />
             <div className={classes.pageContent}>
                 <div className={classes.previewContainer}>
-                    <motion.img 
-                        className={classes.documentPreview} 
-                        src="/images/documents-previews/regolamento-centro-infanzia-GENNAIO-2025.png" 
+                    <motion.img
+                        className={classes.documentPreview}
+                        src="/images/documents-previews/regolamento-centro-infanzia-GENNAIO-2025.png"
                         onClick={handleDocumentDownload}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
-                    <button 
-                        className={`${classes.downloadButton} ${sour_gummy.className}`} 
+                    <button
+                        className={`${classes.downloadButton} ${sour_gummy.className}`}
                         onClick={handleDocumentDownload}
                     >
                         Visualizza
