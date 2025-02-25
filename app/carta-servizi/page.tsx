@@ -29,7 +29,6 @@ const ServicesPage = () => {
                         onClick={handleDocumentDownload}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.4 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
