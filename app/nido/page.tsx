@@ -8,6 +8,15 @@ import "yet-another-react-lightbox/styles.css";
 import { motion, spring } from "motion/react";
 import Lightbox from "yet-another-react-lightbox";
 
+const activities = [
+    { src: "/images/nursery/activities/1.jpg" },
+    { src: "/images/nursery/activities/2.jpg" },
+    { src: "/images/nursery/activities/3.jpg" },
+    { src: "/images/nursery/activities/4.jpg" },
+    { src: "/images/nursery/activities/5.jpg" },
+    { src: "/images/nursery/activities/6.jpg" },
+]
+
 const babies = [
     { src: "/images/nursery/babies/1.jpg" },
     { src: "/images/nursery/babies/2.jpg" },
@@ -59,7 +68,7 @@ const garden = [
     { src: "/images/nursery/garden/5.jpg" },
 ]
 
-const images = babies.concat(over12months.slice(0,5)).concat(over12months.slice(11)).concat(garden);
+const images = activities.concat(babies).concat(over12months.slice(0, 5)).concat(over12months.slice(11)).concat(garden);
 
 /**
  * Renders the Nuersery page.
@@ -103,6 +112,36 @@ const NurseryPage = () => {
                     di bambini di età compresa tra i 12 e 36 mesi che risponde a bisogni di socializzazione, di
                     contatto con la natura e scoperta di materiali.
                 </p>
+                <h2>Attività</h2>
+                <Masonry
+                    breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                    className={classes.masonryGrid}
+                    columnClassName={classes.masonryColumn}
+                >
+                    {activities.map((image, i) => (
+                        <motion.img
+                            layoutId={`activities-${i}`}
+                            initial={{
+                                y: +100,
+                                opacity: 0
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                type: spring
+                            }}
+                            viewport={{ once: true }}
+                            key={i}
+                            src={image.src}
+                            alt=""
+                            onClick={() => openLightbox(i)}
+                            className={classes.images}
+                        />
+                    ))}
+                </Masonry>
                 <h2>Lattanti - Da 3 a 12 mesi</h2>
                 <h3>Accoglienza</h3>
                 <Masonry
@@ -129,7 +168,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i)}
+                            onClick={() => openLightbox(i + 6)}
                             className={classes.images}
                         />
                     ))}
@@ -159,7 +198,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i + 1)}
+                            onClick={() => openLightbox(i + 7)}
                             className={classes.images}
                         />
                     ))}
@@ -189,7 +228,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i + 7)}
+                            onClick={() => openLightbox(i + 13)}
                             className={classes.images}
                         />
                     ))}
@@ -219,7 +258,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i + 10)}
+                            onClick={() => openLightbox(i + 16)}
                             className={classes.images}
                         />
                     ))}
@@ -246,7 +285,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i + 12)}
+                            onClick={() => openLightbox(i + 18)}
                             className={classes.images}
                         />
                     ))}
@@ -272,7 +311,7 @@ const NurseryPage = () => {
                             key={i}
                             src={image.src}
                             alt=""
-                            onClick={() => openLightbox(i + 16)}
+                            onClick={() => openLightbox(i + 22)}
                             className={classes.images}
                         />
                     ))}

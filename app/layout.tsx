@@ -8,7 +8,7 @@ const sour_gummy = Sour_Gummy({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: "Scuola Almarosa Rech",
   description: "Benvenuti al centro infanzia suor Almarosa Rech di Villa del Conte",
-  keywords: ["asilo", "scuola", "centro", "infanzia", "villa del conte", "nido", "primavera"],
+  keywords: ["asilo", "scuola", "centro", "infanzia", "villa del conte", "nido", "primavera", "almarosa", "rech"],
   robots: "index, follow",
   openGraph: {
     title: "Scuola Almarosa Rech",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Scuola Almarosa Rech",
     images: [
       {
-        url: "https://centro-infanzia-vdc.vercel.app/icon.svg",
+        url: "https://centro-infanzia-vdc.vercel.app/images/logo/sole.png",
         width: 500,
         height: 500,
       },

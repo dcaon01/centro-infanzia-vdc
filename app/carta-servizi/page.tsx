@@ -28,7 +28,8 @@ const ServicesPage = () => {
                         src="/images/documents-previews/carta-servizi.png"
                         onClick={handleDocumentDownload}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>

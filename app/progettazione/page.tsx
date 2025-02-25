@@ -27,20 +27,21 @@ const PlanningPage = () => {
 
     return (
         <main>
-            <PageHeader title="Progettazione"/>
+            <PageHeader title="Progettazione" />
             <div className={classes.pageContent}>
                 <h2>Offerta formativa</h2>
                 <div className={classes.previewContainer}>
-                    <motion.img 
-                        className={classes.documentPreview} 
-                        src="/images/documents-previews/progettazione.png" 
+                    <motion.img
+                        className={classes.documentPreview}
+                        src="/images/documents-previews/progettazione.png"
                         onClick={handleOfferDocumentDownload}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
-                    <button 
+                    <button
                         className={`${classes.downloadButton} ${sour_gummy.className}`}
                         onClick={handleOfferDocumentDownload}
                     >
@@ -49,17 +50,18 @@ const PlanningPage = () => {
                 </div>
                 <h2>Progetto socio-psico pedagogico</h2>
                 <div className={classes.previewContainer}>
-                    <motion.img 
-                        className={classes.documentPreview} 
-                        src="/images/documents-previews/pps2024-2025.png" 
+                    <motion.img
+                        className={classes.documentPreview}
+                        src="/images/documents-previews/pps2024-2025.png"
                         onClick={handleProjectDocumentDownload}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
-                    <button 
-                        className={`${classes.downloadButton} ${sour_gummy.className}`} 
+                    <button
+                        className={`${classes.downloadButton} ${sour_gummy.className}`}
                         onClick={handleProjectDocumentDownload}
                     >
                         Visualizza

@@ -64,7 +64,8 @@ const MenuPage = () => {
                         src="/images/documents-previews/a4-menu-infanzia-2024-2025-autunno-inverno.png"
                         onClick={() => handleDocumentDownload(1)}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -81,7 +82,8 @@ const MenuPage = () => {
                         src="/images/documents-previews/a4-menu-infanzia-2024-2025-primavera-estate.png"
                         onClick={() => handleDocumentDownload(2)}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -99,7 +101,8 @@ const MenuPage = () => {
                         src="/images/documents-previews/a4-menu-nido-2024-2025-autunno-inverno.png"
                         onClick={() => handleDocumentDownload(3)}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -116,7 +119,8 @@ const MenuPage = () => {
                         src="/images/documents-previews/a4-menu-nido-2024-2025-primavera-estate.png"
                         onClick={() => handleDocumentDownload(4)}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
                     />
                 </div>
                 <div className={classes.dbContainer}>
@@ -144,7 +148,7 @@ const MenuPage = () => {
                                 y: 0,
                                 opacity: 1
                             }}
-                            transition={{duration: 0.3}}
+                            transition={{ duration: 0.3 }}
                             viewport={{ once: true }}
                             key={i}
                             src={image.src}
