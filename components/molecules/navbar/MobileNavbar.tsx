@@ -113,7 +113,7 @@ const MobileNavbar = () => {
                                 <a key="home-link" className={`${classes.link} ${classes.top}`} onClick={() => { handleMenuDropDown("/") }} href={"/"}>Home</a>
                                 <div className={classes.yearsDropdown} onClick={manageYearDropdown}>
                                     <div className={classes.dropdownTrigger}>
-                                        <p>Classi</p>
+                                        <p>Sezioni</p>
                                         <motion.svg height={10} width={10} xmlns="http://www.w3.org/2000/svg" animate={{ transform: `rotate(${yearDropdown ? 180 : 0}deg)` }} >
                                             <polygon points="0,0 10,0 5,10" className={classes.modulesSelectorArrow} />
                                         </motion.svg>
