@@ -20,7 +20,8 @@
 
     .documentPreview {
         border: solid 2px #5c5c5c;
-        width: 100%;
+        width: 1000px;
+        height: 411px;
 
         &:hover {
             cursor: pointer;
@@ -73,10 +74,25 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .previewContainer {
+        .documentPreview {
+            width: 600px;
+            height: 243px;
+        }
+    }
+}
+
 @media (max-width: 650px) {
     .dbContainer {
         .downloadButton {
             width: 100%;
+        }
+    }
+    .previewContainer {
+        .documentPreview {
+            width: 400px;
+            height: 165px;
         }
     }
 }
