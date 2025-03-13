@@ -38,6 +38,9 @@ const MenuPage = () => {
             case 4:
                 window.open("/documents/menu/a4-menu-nido-2024-2025-primavera-estate.pdf", "_blank", "noopener,noreferrer");
                 break;
+            case 5:
+                window.open("/documents/menu/menu_lattanti.pdf", "_blank", "noopener,noreferrer");
+                break;
             default:
                 window.open(undefined, "_blank", "noopener,noreferrer");
             // end
@@ -125,6 +128,24 @@ const MenuPage = () => {
                         onClick={() => handleDocumentDownload(4)}
                     >
                         Visualizza Primavera/Estate
+                    </button>
+                </div>
+                <h2>Lattanti</h2>
+                <div className={classes.previewContainer}>
+                    <motion.img
+                        className={`${classes.infants}`}
+                        src="/images/documents-previews/menu_lattanti.png"
+                        onClick={() => handleDocumentDownload(5)}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                    />
+                </div>
+                <div className={classes.dbContainer}>
+                    <button
+                        className={`${classes.downloadButton} ${sour_gummy.className}`}
+                        onClick={() => handleDocumentDownload(5)}
+                    >
+                        Visualizza
                     </button>
                 </div>
                 <h3 className={classes.divisor}>Cucina</h3>

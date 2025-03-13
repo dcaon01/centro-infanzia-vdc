@@ -27,6 +27,16 @@
             cursor: pointer;
         }
     }
+
+    .infants {
+        border: solid 2px #5c5c5c;
+        width: 1000px;
+        height: 600px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .masonryGrid {
@@ -80,6 +90,10 @@
             width: 600px;
             height: 243px;
         }
+        .infants {
+            width: 600px;
+            height: 360px;
+        }
     }
 }
 
@@ -93,6 +107,28 @@
         .documentPreview {
             width: 400px;
             height: 165px;
+        }
+        .infants {
+            width: 400px;
+            height: 260px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .dbContainer {
+        .downloadButton {
+            width: 100%;
+        }
+    }
+    .previewContainer {
+        .documentPreview {
+            width: 300px;
+            height: 118px;
+        }
+        .infants {
+            width: 300px;
+            height: 180px;
         }
     }
 }

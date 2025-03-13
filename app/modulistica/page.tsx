@@ -7,7 +7,8 @@ const ModulesPage = () => {
         <main>
             <PageHeader title="Modulistica" />
             <div className={classes.pageContent}>
-
+                {/* Da eliminare, mettere i bottoni per scaricare */}
+                <p>Clicca sul link per visualizzare/scaricare il documento:</p>
                 <div className={classes.linksContainer}>
                     <h2>Iscrizioni</h2>
                     <p>- <a href="/documents/subscriptions/iscrizione-nido-2025-2026.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Iscrizione nido 2025-2026</a></p>
@@ -26,6 +27,10 @@ const ModulesPage = () => {
                     <h2>Diete</h2>
                     <p>- <a href="/documents/diets/moduli-diete-speciali.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Richiesta dieta per allergie ed intolleranze</a></p>
                     <p>- <a href="/documents/diets/motivi-etico-religiosi.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Richiesta dieta per motivi etico-religiosi</a></p>
+                </div>
+                <div className={classes.linksContainer}>
+                    <h2>Lettere</h2>
+                    <p>- <a href="/documents/letters/lettera-di-ambientamento.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Lettera di ambientamento</a></p>
                 </div>
             </div>
         </main>
