@@ -27,6 +27,10 @@ const ModulesPage = () => {
                     <p>- <a href="/documents/diets/moduli-diete-speciali.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Richiesta dieta per allergie ed intolleranze</a></p>
                     <p>- <a href="/documents/diets/motivi-etico-religiosi.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Richiesta dieta per motivi etico-religiosi</a></p>
                 </div>
+                <div className={classes.linksContainer}>
+                    <h2>Lettere</h2>
+                    <p>- <a href="/documents/letters/lettera-di-ambientamento.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Lettera di ambientamento</a></p>
+                </div>
             </div>
         </main>
     );
