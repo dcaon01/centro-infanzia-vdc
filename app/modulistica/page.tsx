@@ -1,4 +1,5 @@
 
+import ModuleRow from "@/components/atoms/module-row/ModuleRow";
 import classes from "./page.module.scss";
 import PageHeader from "@/components/atoms/page-header/PageHeader";
 
@@ -7,30 +8,52 @@ const ModulesPage = () => {
         <main>
             <PageHeader title="Modulistica" />
             <div className={classes.pageContent}>
-                {/* Da eliminare, mettere i bottoni per scaricare */}
-                <p>Clicca sul link per visualizzare/scaricare il documento:</p>
                 <div className={classes.linksContainer}>
                     <h2>Iscrizioni</h2>
-                    <p>- <a href="/documents/subscriptions/iscrizione-nido-2025-2026.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Iscrizione nido 2025-2026</a></p>
-                    <p>- <a href="/documents/subscriptions/iscrizione-scuola-dellinfanzia-2025-2026.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Iscrizione infanzia 2025-2026</a></p>
-                    <p>- <a href="/documents/subscriptions/iscrizione-sezione-primavera-2025-2026.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Iscrizione sezione primavera 2025-2026</a></p>
+                    <ModuleRow 
+                        text="Iscrizione nido 2025-2026"
+                        url="/documents/subscriptions/iscrizione-nido-2025-2026.pdf"
+                    />
+                    <ModuleRow 
+                        text="Iscrizione infanzia 2025-2026"
+                        url="/documents/subscriptions/iscrizione-scuola-dellinfanzia-2025-2026.pdf"
+                    />
+                    <ModuleRow 
+                        text="Iscrizione sezione primavera 2025-2026"
+                        url="/documents/subscriptions/iscrizione-sezione-primavera-2025-2026.pdf"
+                    />
                 </div>
                 <div className={classes.linksContainer}>
                     <h2>Giustifiche</h2>
-                    <p>- <a href="/documents/justifications/giustificazione-assenze.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Giustificazione di assenza</a></p>
+                    <ModuleRow 
+                        text="Giustificazione di assenza"
+                        url="/documents/justifications/giustificazione-assenze.pdf"
+                    />
                 </div>
                 <div className={classes.linksContainer}>
                     <h2>Deleghe</h2>
-                    <p>- <a href="/documents/delegations/delega-ritiro.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Delega per il ritiro del bambino</a></p>
+                    <ModuleRow 
+                        text="Delega per il ritiro del bambino"
+                        url="/documents/delegations/delega-ritiro.pdf"
+                    />
                 </div>
                 <div className={classes.linksContainer}>
                     <h2>Diete</h2>
-                    <p>- <a href="/documents/diets/moduli-diete-speciali.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Richiesta dieta per allergie ed intolleranze</a></p>
-                    <p>- <a href="/documents/diets/motivi-etico-religiosi.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Richiesta dieta per motivi etico-religiosi</a></p>
+                    <ModuleRow 
+                        text="Richiesta dieta per allergie ed intolleranze"
+                        url="/documents/diets/moduli-diete-speciali.pdf"
+                    />
+                    <ModuleRow 
+                        text="Richiesta dieta per motivi etico-religiosi"
+                        url="/documents/diets/motivi-etico-religiosi.pdf"
+                    />
                 </div>
                 <div className={classes.linksContainer}>
                     <h2>Lettere</h2>
-                    <p>- <a href="/documents/letters/lettera-di-ambientamento.pdf" target="_blank" rel="noopener noreferrer" className={classes.link}>Lettera di ambientamento</a></p>
+                    <ModuleRow 
+                        text="Lettera di ambientamento"
+                        url="/documents/letters/lettera-di-ambientamento.pdf"
+                    />
                 </div>
             </div>
         </main>
