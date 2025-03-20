@@ -13,16 +13,6 @@
     min-height: 100vh;
 }
 
-.link  {
-    text-decoration: none;
-    color: #5c5c5c;
-
-    &:hover {
-        color: black;
-        text-decoration: underline;
-    }
-}
-
 .linksCcntainer {
     display: flex;
     flex-direction: column;
