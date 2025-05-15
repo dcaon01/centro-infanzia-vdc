@@ -55,6 +55,13 @@ const ModulesPage = () => {
                         url="/documents/letters/lettera-di-ambientamento.pdf"
                     />
                 </div>
+                <div className={classes.linksContainer}>
+                    <h2>Salute</h2>
+                    <ModuleRow 
+                        text="Manuale prevenzione malattie infettive"
+                        url="/documents/health/Manuale-PrevenzioneMalattie-Infettive-della-Regione-Veneto.pdf"
+                    />
+                </div>
             </div>
         </main>
     );
