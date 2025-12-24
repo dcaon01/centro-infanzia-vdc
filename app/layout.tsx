@@ -3,7 +3,10 @@ import "./globals.scss";
 import Navbar from "@/components/molecules/navbar/Navbar";
 import { Sour_Gummy } from "next/font/google";
 import Footer from "@/components/molecules/footer/Footer";
-const sour_gummy = Sour_Gummy({ subsets: ['latin'] })
+const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
+import { RouteLoaderProvider } from "@/components/providers/route-loader-provider/RouteLoaderProvider";
+import { Suspense } from "react";
+import LoaderPage from "@/components/molecules/loader-page/LoaderPage";
 
 export const metadata: Metadata = {
   title: "Centro Infanzia Suor Almarosa Rech",
@@ -38,9 +41,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sour_gummy.className}`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <RouteLoaderProvider >
+          <Suspense fallback={<LoaderPage />}></Suspense>
+          <Navbar />
+          {children}
+          <Footer />
+        </RouteLoaderProvider>
       </body>
     </html>
   );
