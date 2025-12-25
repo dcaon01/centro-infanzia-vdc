@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useRef } from 'react';
+import { createContext, useContext, useRef, Suspense } from 'react';
 import { RouteLoader } from '@/components/molecules/route-loader/RouteLoader';
 
 const RouteLoaderContext = createContext({
@@ -18,7 +18,9 @@ export function RouteLoaderProvider({ children }) {
         stopLoading: () => loaderRef.current?.stop()
       }}
     >
-      <RouteLoader ref={loaderRef} />
+      <Suspense fallback={null}>
+        <RouteLoader ref={loaderRef} />
+      </Suspense>
       {children}
     </RouteLoaderContext.Provider>
   );
