@@ -24,7 +24,7 @@ const ModulesPage = () => {
                     /> */}
                     <ModuleRow 
                         text="Iscrizione 2026-2027"
-                        url="/documents/subscriptions/modulo-iscrizione-26%20-27-12012026094111.pdf"
+                        url="/documents/subscriptions/modulo-iscrizione-26-27.pdf"
                     />
                 </div>
                 <div className={classes.linksContainer}>
