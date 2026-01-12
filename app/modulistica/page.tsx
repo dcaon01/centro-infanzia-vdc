@@ -10,7 +10,7 @@ const ModulesPage = () => {
             <div className={classes.pageContent}>
                 <div className={classes.linksContainer}>
                     <h2>Iscrizioni</h2>
-                    <ModuleRow 
+                    {/* <ModuleRow 
                         text="Iscrizione nido 2025-2026"
                         url="/documents/subscriptions/iscrizione-nido-2025-2026.pdf"
                     />
@@ -21,6 +21,10 @@ const ModulesPage = () => {
                     <ModuleRow 
                         text="Iscrizione sezione primavera 2025-2026"
                         url="/documents/subscriptions/iscrizione-sezione-primavera-2025-2026.pdf"
+                    /> */}
+                    <ModuleRow 
+                        text="Iscrizione 2026-2027"
+                        url="/documents/subscriptions/modulo-iscrizione-26%20-27-12012026094111.pdf"
                     />
                 </div>
                 <div className={classes.linksContainer}>

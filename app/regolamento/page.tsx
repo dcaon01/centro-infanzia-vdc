@@ -11,7 +11,7 @@ const RegulationPage = () => {
      * Manages the download of the document
      */
     function handleDocumentDownload(): void {
-        window.open("/documents/regulations/regolamento-centro-infanzia-FEBBRAIO-2025.pdf", "_blank", "noopener,noreferrer");
+        window.open("/documents/regulations/regolamento-centro-infanzia-GENNAIO-2026.pdf", "_blank", "noopener,noreferrer");
     }
 
     return (
@@ -21,7 +21,7 @@ const RegulationPage = () => {
                 <div className={classes.previewContainer}>
                     <motion.img
                         className={classes.documentPreview}
-                        src="/images/documents-previews/regolamento-centro-infanzia-GENNAIO-2025.png"
+                        src="/images/documents-previews/regolamento-centro-infanzia-GENNAIO-2026.png"
                         onClick={handleDocumentDownload}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
