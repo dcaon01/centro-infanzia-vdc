@@ -39,7 +39,7 @@ const MenuPage = () => {
                 window.open("/documents/menu/a4-menu-nido-2024-2025-primavera-estate.pdf", "_blank", "noopener,noreferrer");
                 break;
             case 5:
-                window.open("/documents/menu/menu_lattanti.pdf", "_blank", "noopener,noreferrer");
+                window.open("/documents/menu/menu_lattanti_2026.pdf", "_blank", "noopener,noreferrer");
                 break;
             default:
                 window.open(undefined, "_blank", "noopener,noreferrer");
@@ -134,7 +134,7 @@ const MenuPage = () => {
                 <div className={classes.previewContainer}>
                     <motion.img
                         className={`${classes.infants}`}
-                        src="/images/documents-previews/menu_lattanti.png"
+                        src="/images/documents-previews/menu_lattanti_2026.png"
                         onClick={() => handleDocumentDownload(5)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
