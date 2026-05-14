@@ -77,6 +77,7 @@ const DesktopNavbar = () => {
                 <Link className={classes.link} href={"/regolamento"} onClick={() => {setYearDropdown(false)}}>Regolamento</Link>
                 <Link className={classes.link} href={"/pasti"} onClick={() => {setYearDropdown(false)}}>Pasti</Link>
                 <Link className={classes.link} href={"/modulistica"} onClick={() => {setYearDropdown(false)}}>Modulistica</Link>
+                <Link className={classes.link} href={"/personale"} onClick={() => {setYearDropdown(false)}}>Personale</Link>
                 <span className={`${classes.link} ${classes.right}`} onClick={scrollToFooter}>Contatti</span>
             </nav>
         </div>

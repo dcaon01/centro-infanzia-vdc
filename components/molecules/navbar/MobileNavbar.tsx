@@ -156,6 +156,7 @@ const MobileNavbar = () => {
                                 <a key="rules-link" className={classes.link} onClick={() => { handleMenuDropDown("/regolamento") }}>Regolamento</a>
                                 <a key="lunch-link" className={classes.link} onClick={() => { handleMenuDropDown("/pasti") }} >Pasti</a>
                                 <a key="modules-link" className={classes.link} onClick={() => { handleMenuDropDown("/modulistica") }} >Modulistica</a>
+                                <a key="staff-link" className={classes.link} onClick={() => { handleMenuDropDown("/personale") }} >Personale</a>
                                 <a key="contacts-link" className={`${classes.link} ${classes.bottom}`} onClick={() => { handleMenuDropDown("#footer") }}>Contatti</a>
                             </div>
                         </motion.div>
