@@ -6,8 +6,6 @@ import PageHeader from "@/components/atoms/page-header/PageHeader";
 import Masonry from "react-masonry-css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { motion } from "motion/react";
-import { spring } from "motion";
 
 const images = [
     { src: "/images/spring/1.jpg" },
@@ -107,21 +105,7 @@ const SpringPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {activities.map((image, i) => (
-                        <motion.img
-                            layoutId= {`activities-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -137,21 +121,7 @@ const SpringPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {playGround.map((image, i) => (
-                        <motion.img
-                            layoutId= {`playGround-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -167,21 +137,7 @@ const SpringPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {bathsAndChanging.map((image, i) => (
-                        <motion.img
-                            layoutId= {`bathsAndChanging-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -197,21 +153,7 @@ const SpringPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {dining.map((image, i) => (
-                        <motion.img
-                            layoutId= {`dining-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -227,21 +169,7 @@ const SpringPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {externals.map((image, i) => (
-                        <motion.img
-                            layoutId= {`activities-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""

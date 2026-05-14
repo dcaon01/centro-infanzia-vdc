@@ -10,6 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         "/modulistica",
         "/nido",
         "/pasti",
+        "/personale",
         "/progettazione",
         "/regolamento",
         "/scuola-infanzia",

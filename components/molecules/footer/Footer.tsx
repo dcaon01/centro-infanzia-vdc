@@ -48,7 +48,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={classes.anchor}>
-                <p>Copyright &#169; 2025</p>
+                <p>Copyright &#169; 2026</p>
                 <p>&nbsp;Parrocchia di Villa del Conte</p>
                 <p className={classes.dash}>&nbsp;-&nbsp;</p>
                 <p>Created by <a href="https://campsite.bio/damianocaon">Damiano Caon</a></p>

@@ -5,7 +5,6 @@ import classes from "./page.module.scss";
 import PageHeader from "@/components/atoms/page-header/PageHeader";
 import Masonry from "react-masonry-css";
 import "yet-another-react-lightbox/styles.css";
-import { motion, spring } from "motion/react";
 import Lightbox from "yet-another-react-lightbox";
 
 const activities = [
@@ -119,21 +118,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {activities.map((image, i) => (
-                        <motion.img
-                            layoutId={`activities-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -150,21 +135,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {welcoming.map((image, i) => (
-                        <motion.img
-                            layoutId={`welcoming-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -180,21 +151,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {babiesPlayground.map((image, i) => (
-                        <motion.img
-                            layoutId={`babiesPlayground-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -210,21 +167,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {babiesDiningRoom.map((image, i) => (
-                        <motion.img
-                            layoutId={`babiesDiningRoom-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -240,21 +183,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {babiesChanging.map((image, i) => (
-                        <motion.img
-                            layoutId={`babiesChanging-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                type: spring
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -271,17 +200,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {overPlayground.map((image, i) => (
-                        <motion.img
-                            layoutId={`overPlayground-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -297,17 +216,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {overAcceptance.map((image, i) => (
-                        <motion.img
-                            layoutId={`overAcceptance-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -323,17 +232,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {overDining.map((image, i) => (
-                        <motion.img
-                            layoutId={`overDining-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -349,17 +248,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {overBaths.map((image, i) => (
-                        <motion.img
-                            layoutId={`overBaths-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -375,17 +264,7 @@ const NurseryPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {garden.map((image, i) => (
-                        <motion.img
-                            layoutId={`overBaths-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""

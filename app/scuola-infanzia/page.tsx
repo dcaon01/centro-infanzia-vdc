@@ -2,7 +2,6 @@
 
 import classes from "./page.module.scss";
 import PageHeader from "@/components/atoms/page-header/PageHeader";
-import { motion } from "motion/react";
 import { useState } from "react";
 import Masonry from "react-masonry-css";
 import Lightbox from "yet-another-react-lightbox";
@@ -103,17 +102,7 @@ const ChildhoodPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {activities.map((image, i) => (
-                        <motion.img
-                            layoutId= {`activities-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -129,17 +118,7 @@ const ChildhoodPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {rooms.map((image, i) => (
-                        <motion.img
-                            layoutId= {`rooms-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -155,17 +134,7 @@ const ChildhoodPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {dining.map((image, i) => (
-                        <motion.img
-                            layoutId= {`dining-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -181,17 +150,7 @@ const ChildhoodPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {externals.map((image, i) => (
-                        <motion.img
-                            layoutId= {`externals-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -207,17 +166,7 @@ const ChildhoodPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {baths.map((image, i) => (
-                        <motion.img
-                            layoutId= {`baths-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
@@ -233,17 +182,7 @@ const ChildhoodPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {gym.map((image, i) => (
-                        <motion.img
-                            layoutId= {`gym-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
