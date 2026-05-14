@@ -155,18 +155,7 @@ const MenuPage = () => {
                     columnClassName={classes.masonryColumn}
                 >
                     {images.map((image, i) => (
-                        <motion.img
-                            layoutId={`kitchen-${i}`}
-                            initial={{
-                                y: +100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1
-                            }}
-                            transition={{ duration: 0.3 }}
-                            viewport={{ once: true }}
+                        <img
                             key={i}
                             src={image.src}
                             alt=""
