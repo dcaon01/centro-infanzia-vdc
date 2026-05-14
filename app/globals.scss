@@ -12,6 +12,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (min-width: 1101px) {
+  body {
+    zoom: 1.25;
+  }
+}
+
 p {
   margin: 0px;
   overflow-wrap: normal;
