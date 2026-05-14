@@ -30,13 +30,13 @@ const MenuPage = () => {
                 window.open("/documents/menu/a4-menu-infanzia-2025-2026-autunno-inverno.pdf", "_blank", "noopener,noreferrer");
                 break;
             case 2:
-                window.open("/documents/menu/a4-menu-infanzia-2024-2025-primavera-estate.pdf", "_blank", "noopener,noreferrer");
+                window.open("/documents/menu/a4-menu-infanzia-2025-2026-primavera-estate.pdf", "_blank", "noopener,noreferrer");
                 break;
             case 3:
                 window.open("/documents/menu/a4-menu-nido-2025-2026-autunno-inverno.pdf", "_blank", "noopener,noreferrer");
                 break;
             case 4:
-                window.open("/documents/menu/a4-menu-nido-2024-2025-primavera-estate.pdf", "_blank", "noopener,noreferrer");
+                window.open("/documents/menu/a4-menu-nido-2025-2026-primavera-estate.pdf", "_blank", "noopener,noreferrer");
                 break;
             case 5:
                 window.open("/documents/menu/menu_lattanti_2026.pdf", "_blank", "noopener,noreferrer");
@@ -81,7 +81,7 @@ const MenuPage = () => {
                 <div className={classes.previewContainer}>
                     <motion.img
                         className={classes.documentPreview}
-                        src="/images/documents-previews/a4-menu-infanzia-2024-2025-primavera-estate.png"
+                        src="/images/documents-previews/a4-menu-infanzia-2025-2026-primavera-estate.png"
                         onClick={() => handleDocumentDownload(2)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -116,7 +116,7 @@ const MenuPage = () => {
                 <div className={classes.previewContainer}>
                     <motion.img
                         className={classes.documentPreview}
-                        src="/images/documents-previews/a4-menu-nido-2024-2025-primavera-estate.png"
+                        src="/images/documents-previews/a4-menu-nido-2025-2026-primavera-estate.png"
                         onClick={() => handleDocumentDownload(4)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

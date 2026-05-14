@@ -169,9 +169,10 @@ const HomePage = () => {
                 <p>Marilena Zandarin</p>
                 <p>Barbara Tonello</p>
                 <p>Elisa Filipetto</p>
+                <p>Marika Zulian</p>
+                <p>Manuela Lago</p>
                 <p>Eleonora Monegato</p>
                 <p>Elena Reato</p>
-                <p>Marika Zulian</p>
               </div>
               <div className={classes.staffCategory}>
                 <h4>Cuoche</h4>
@@ -180,9 +181,9 @@ const HomePage = () => {
               </div>
               <div className={classes.staffCategory}>
                 <h4>Addette alle pulizie</h4>
-                <p>Sabrina Pedron</p>
                 <p>Michela Gazzola</p>
                 <p>Giovanna Destro</p>
+                <p>Sonia Affili</p>
               </div>
               <div className={classes.staffCategory}>
                 <h4>Enti</h4>

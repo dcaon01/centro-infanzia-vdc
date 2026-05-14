@@ -73,9 +73,13 @@ const ModulesPage = () => {
                         text="Prescrizione del medico curante alla somministrazione di farmaci in ambito scolastico"
                         url="/documents/health/MODELLO-A2-Richiesta-medico.pdf"
                     />
-                    <ModuleRow 
+                    <ModuleRow
                         text="Liberatoria"
                         url="/documents/health/MODELLO-A3-liberatoria.pdf"
+                    />
+                    <ModuleRow
+                        text="Procedura latte materno"
+                        url="/documents/health/procedura-latte-materno.pdf"
                     />
                 </div>
             </div>
