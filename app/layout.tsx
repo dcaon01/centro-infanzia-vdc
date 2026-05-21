@@ -5,8 +5,6 @@ import { Sour_Gummy } from "next/font/google";
 import Footer from "@/components/molecules/footer/Footer";
 const sour_gummy = Sour_Gummy({ subsets: ['latin'] });
 import { RouteLoaderProvider } from "@/components/providers/route-loader-provider/RouteLoaderProvider";
-import { Suspense } from "react";
-import LoaderPage from "@/components/molecules/loader-page/LoaderPage";
 
 export const metadata: Metadata = {
   title: "Centro Infanzia Suor Almarosa Rech",
@@ -42,7 +40,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sour_gummy.className}`}>
         <RouteLoaderProvider >
-          <Suspense fallback={<LoaderPage />}></Suspense>
           <Navbar />
           {children}
           <Footer />

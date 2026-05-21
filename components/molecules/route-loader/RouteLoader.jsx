@@ -32,7 +32,7 @@ export const RouteLoader = forwardRef(
       if (lastPathnameRef.current !== pathname) {
         setIsLoading(false);
         lastPathnameRef.current = pathname;
-        
+
         if (timeoutRef.current) {
           clearTimeout(timeoutRef.current);
         }
@@ -43,25 +43,25 @@ export const RouteLoader = forwardRef(
       const handleClick = (e) => {
         const target = e.target;
         const link = target.closest('a');
-        
+
         if (!link || !link.href) return;
-        
+
         if (!link.href.startsWith(window.location.origin)) return;
-        
+
         if (link.getAttribute('target') === '_blank') return;
         if (link.href.startsWith('mailto:') || link.href.startsWith('tel:')) return;
-        
+
         const linkUrl = new URL(link.href);
         const currentUrl = new URL(window.location.href);
-        
-        if (linkUrl.pathname === currentUrl.pathname && 
+
+        if (linkUrl.pathname === currentUrl.pathname &&
             linkUrl.search === currentUrl.search &&
             linkUrl.hash === currentUrl.hash) {
           return;
         }
-        
+
         setIsLoading(true);
-        
+
         if (timeoutRef.current) {
           clearTimeout(timeoutRef.current);
         }
@@ -72,7 +72,7 @@ export const RouteLoader = forwardRef(
       };
 
       document.addEventListener('click', handleClick);
-      
+
       return () => {
         document.removeEventListener('click', handleClick);
         if (timeoutRef.current) {

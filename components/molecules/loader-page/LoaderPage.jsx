@@ -4,7 +4,7 @@ import { LoaderCircle } from 'lucide-react';
 const LoaderPage = () => {
     return (
         <div className={classes.loaderPage}>
-            <LoaderCircle className={classes.loaderCircle} size={24}></LoaderCircle>
+            <LoaderCircle className={classes.loaderCircle} size={48}></LoaderCircle>
         </div>
     );
 }

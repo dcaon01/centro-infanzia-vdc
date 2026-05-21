@@ -1,12 +1,20 @@
 .allViewContainer {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
     height: 100vh;
-    width: 100%;
-    z-index: 18;
+    z-index: 9999;
     background-color: white;
+
+    @media (min-width: 1101px) {
+        zoom: 0.8;
+    }
 
     .loadingContainer {
         animation: rotates 3s linear infinite;

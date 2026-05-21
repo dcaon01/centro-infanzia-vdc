@@ -15,7 +15,7 @@ const PlanningPage = () => {
      * Manages the download of the document of the offer.
      */
     function handleOfferDocumentDownload(): void {
-        window.open("/documents/planning/ptof22-25.pdf", "_blank", "noopener,noreferrer");
+        window.open("/documents/planning/ptof 25-28.pdf", "_blank", "noopener,noreferrer");
     }
 
     /**
