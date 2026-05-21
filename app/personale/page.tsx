@@ -23,11 +23,10 @@ const StaffPage = () => {
                     </div>
                     <svg className={classes.branchConnector} viewBox="0 0 400 80" preserveAspectRatio="none">
                         <line x1="200" y1="0" x2="200" y2="30" stroke="black" strokeWidth="0.5" />
-                        <line x1="50" y1="30" x2="350" y2="30" stroke="black" strokeWidth="0.5" />
-                        <line x1="50" y1="30" x2="50" y2="80" stroke="black" strokeWidth="0.5" />
-                        <line x1="150" y1="30" x2="150" y2="80" stroke="black" strokeWidth="0.5" />
-                        <line x1="250" y1="30" x2="250" y2="80" stroke="black" strokeWidth="0.5" />
-                        <line x1="350" y1="30" x2="350" y2="80" stroke="black" strokeWidth="0.5" />
+                        <line x1="67" y1="30" x2="333" y2="30" stroke="black" strokeWidth="0.5" />
+                        <line x1="67" y1="30" x2="67" y2="80" stroke="black" strokeWidth="0.5" />
+                        <line x1="200" y1="30" x2="200" y2="80" stroke="black" strokeWidth="0.5" />
+                        <line x1="333" y1="30" x2="333" y2="80" stroke="black" strokeWidth="0.5" />
                     </svg>
                     <svg className={classes.branchConnectorMobile} viewBox="0 0 400 80" preserveAspectRatio="none">
                         <line x1="200" y1="0" x2="200" y2="30" stroke="black" strokeWidth="0.5" />
@@ -60,14 +59,6 @@ const StaffPage = () => {
                             <p>Michela Gazzola</p>
                             <p>Giovanna Destro</p>
                             <p>Sonia Affili</p>
-                        </div>
-                        <div className={classes.staffCategory}>
-                            <h4>Enti</h4>
-                            <p>UST</p>
-                            <p>URS</p>
-                            <p>Regione Veneto</p>
-                            <p>Ulss</p>
-                            <p>Amministrazione Comunale</p>
                         </div>
                     </div>
                 </div>

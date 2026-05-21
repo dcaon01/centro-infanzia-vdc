@@ -20,6 +20,10 @@ const sections: Section[] = [
                 text: "Iscrizione 2026-2027",
                 url: "/documents/subscriptions/modulo-iscrizione-26-27.pdf",
             },
+            {
+                text: "Modulo di ritiro",
+                url: "/documents/subscriptions/modulo-ritiro.pdf",
+            },
         ],
     },
     {
@@ -32,15 +36,11 @@ const sections: Section[] = [
         ],
     },
     {
-        title: "Uscite",
+        title: "Deleghe",
         modules: [
             {
                 text: "Delega per il ritiro del bambino",
-                url: "/documents/pick-up/delega-ritiro.pdf",
-            },
-            {
-                text: "Modulo di ritiro",
-                url: "/documents/pick-up/modulo-ritiro.pdf",
+                url: "/documents/delegations/delega-ritiro.pdf",
             },
         ],
     },
