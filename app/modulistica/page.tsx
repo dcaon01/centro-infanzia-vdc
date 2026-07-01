@@ -14,6 +14,15 @@ type Section = { title: string; modules: Module[] };
 
 const sections: Section[] = [
     {
+        title: "Calendario",
+        modules: [
+            {
+                text: "Calendario scolastico 2026-2027",
+                url: "/documents/calendars/calendario-scolastico-2026-2027.pdf",
+            },
+        ],
+    },
+    {
         title: "Iscrizioni",
         modules: [
             {
