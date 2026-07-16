@@ -84,7 +84,7 @@ const sections: Section[] = [
         modules: [
             {
                 text: "Manuale prevenzione malattie infettive",
-                url: "/documents/health/Manuale-PrevenzioneMalattie-Infettive-della-Regione-Veneto.pdf",
+                url: "/documents/health/manuale-malattie-infettive-scuole-2026.pdf",
             },
             {
                 text: "Richiesta di somministrazione farmaci",
