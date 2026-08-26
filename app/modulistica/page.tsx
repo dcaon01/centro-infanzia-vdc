@@ -30,6 +30,26 @@ const sections: Section[] = [
                 url: "/documents/subscriptions/modulo-iscrizione-26-27.pdf",
             },
             {
+                text: "Quote e rette 2026-2027",
+                url: "/documents/subscriptions/quote-2026-2027.pdf",
+            },
+            {
+                text: "Date di ambientamento 2026-2027",
+                url: "/documents/subscriptions/date-ambientamento-2026-2027.pdf",
+            },
+            {
+                text: "Adesione al post scuola 2026-2027",
+                url: "/documents/subscriptions/adesione-post-scuola-2026-2027.pdf",
+            },
+            {
+                text: "Cosa portare quando inizio a frequentare il centro infanzia",
+                url: "/documents/letters/lettera-di-ambientamento.pdf",
+            },
+            {
+                text: "Dati per bonus nido",
+                url: "/documents/subscriptions/dati-bonus-nido.pdf",
+            },
+            {
                 text: "Modulo di ritiro",
                 url: "/documents/subscriptions/modulo-ritiro.pdf",
             },
@@ -67,15 +87,6 @@ const sections: Section[] = [
             {
                 text: "Richiesta dieta per motivi etico-religiosi",
                 url: "/documents/diets/motivi-etico-religiosi.pdf",
-            },
-        ],
-    },
-    {
-        title: "Lettere",
-        modules: [
-            {
-                text: "Lettera di ambientamento",
-                url: "/documents/letters/lettera-di-ambientamento.pdf",
             },
         ],
     },
