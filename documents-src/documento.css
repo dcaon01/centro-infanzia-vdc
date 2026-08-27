@@ -52,6 +52,21 @@ h1 {
     margin: 0 0 22px 0;
 }
 
+h2 {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #024c81;
+    margin: 24px 0 10px 0;
+}
+
+.iban {
+    font-size: 13.5pt;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #024c81;
+    white-space: nowrap;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
